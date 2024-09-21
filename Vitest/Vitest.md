@@ -37,17 +37,6 @@
 [Conclusión	4](#_r47fp8wr8kqu)
 
 
-- Principales features de cada tecnología
-- Empresa que lo avala 
-- Curva de aprendizaje
-- Repo
-- Soporte y actualizaciones
-- Documentación
-- Comunidad y popularidad
-- Demanda y uso en el mercado
-- ¿Admiten end to end? / Alcance
-- Compatibilidad 
-
 Vitest. Es un framework de testing unitario nativo de Vite con soporte a ESM,
 
 TypeScript y JSX powered by esbuild.
