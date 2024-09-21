@@ -72,7 +72,6 @@ de funciones y módulos.
 
 componentes y otros elementos.
 
-![](Aspose.Words.b5e61b96-5403-4ee8-ac04-e88da83aada0.001.png)
 ## <a name="_tsx1jt78gejb"></a>**Empresa que lo avala**
 
 `   `Vitest es desarrollado y mantenido por la comunidad y se basa en el trabajo
