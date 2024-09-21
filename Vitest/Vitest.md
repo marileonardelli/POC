@@ -2,39 +2,39 @@
 
 <a name="_7ud0x3sfuqzz"></a>**VITEST**
 
-[Principales features	2](#_lka04641bfzk)
+[Principales features](#_lka04641bfzk)
 
-[Velocidad	2](#_h1b4a1gp8az5)
+[Velocidad](#_h1b4a1gp8az5)
 
-[Soporte para TypeScript	2](#_ds5x9ni5bh9i)
+[Soporte para TypeScript](#_ds5x9ni5bh9i)
 
-[Mocks y spies	2](#_7nre7ewqay2)
+[Mocks y spies	](#_7nre7ewqay2)
 
-[Pruebas unitarias y de integración:	2](#_e6ddqrr9k8r1)
+[Pruebas unitarias y de integración:	](#_e6ddqrr9k8r1)
 
-[Snapshot testing	2](#_u2gqtlpft1un)
+[Snapshot testing	](#_u2gqtlpft1un)
 
-[Empresa que lo avala	2](#_tsx1jt78gejb)
+[Empresa que lo avala	](#_tsx1jt78gejb)
 
-[Curva de aprendizaje	3](#_dfkzgj38tde2)
+[Curva de aprendizaje	](#_dfkzgj38tde2)
 
-[Repositorio	3](#_dv6zcobxm2vu)
+[Repositorio	](#_dv6zcobxm2vu)
 
-[Soporte y actualizaciones	3](#_ofr6nbyztlss)
+[Soporte y actualizaciones	](#_ofr6nbyztlss)
 
-[TypeScript / JSX.	3](#_gryhdjvgculm)
+[TypeScript / JSX.	](#_gryhdjvgculm)
 
-[Documentación	3](#_qqssg9fmiev8)
+[Documentación	](#_qqssg9fmiev8)
 
-[Comunidad y popularidad	4](#_tkvz0y3yng5q)
+[Comunidad y popularidad	](#_tkvz0y3yng5q)
 
-[Demanda y uso en el mercado	4](#_f0b9ggl7mkk)
+[Demanda y uso en el mercado](#_f0b9ggl7mkk)
 
-[¿Admiten end to end? / Alcance	4](#_d08c9pk5v46o)
+[¿Admiten end to end? / Alcance	](#_d08c9pk5v46o)
 
-[Compatibilidad:	4](#_s20pacq5zs40)
+[Compatibilidad:	](#_s20pacq5zs40)
 
-[Conclusión	4](#_r47fp8wr8kqu)
+[Conclusión	](#_r47fp8wr8kqu)
 
 
 Vitest. Es un framework de testing unitario nativo de Vite con soporte a ESM,
