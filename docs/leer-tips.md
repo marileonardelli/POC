@@ -1,7 +1,5 @@
 > [!TIP]
-
 > Cada archivo debería contener:
-
 > 1. Descripción: Breve introducción sobre la tecnología.
 > 2. Instalación: Pasos detallados para instalar el framework.
 > 3. Configuración básica: Instrucciones sobre cómo configurar el test suite en un proyecto.
