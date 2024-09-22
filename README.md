@@ -34,7 +34,6 @@ Este repositorio está dedicado a la exploración, comparación y evaluación de
 │   ├── msw/                 # Pruebas y ejemplos relacionados con Mock Service Worker
 │   ├── testing-library/     # Pruebas y ejemplos relacionados con Testing Library
 │   ├── testcafe/            # Pruebas y ejemplos relacionados con TestCafe
-│   └── ...                  # Otras suites de pruebas
 ├── docs/                    # Documentación para cada test suite
 └── results/                 # Resultados de pruebas de rendimiento y comparaciones
 
