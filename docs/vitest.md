@@ -15,7 +15,7 @@ pnpm add -D vitest
 
 ```
 
-> [!TIP]
+> [!IMPORTANT]
 > Vitest requiere Vite >=v5.0.0 y Node >=v18.0.0
 
 
