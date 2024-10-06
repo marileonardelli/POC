@@ -10,7 +10,7 @@ const characters = [
     22,
     11,
     ['Lightsaber', 'Death Star'],
-    'a02b91bc-3769-4221-beb1-d7a3aeba7dad'
+    '1234'
   ),
 ]
 
