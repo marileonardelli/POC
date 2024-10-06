@@ -1,5 +1,5 @@
 import { Router } from 'express'
-import { sanitizeCharacterInput, findAll, findOne, add, update, remove } from '../character/character.controller.js'
+import { sanitizeCharacterInput, findAll, findOne, add, update, remove } from './character.controler.js'
 
 export const characterRouter = Router()
 
