@@ -9,6 +9,10 @@
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "strict": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    },
     "alwaysStrict": true,
     "skipLibCheck": true,
     "emitDecoratorMetadata": true,

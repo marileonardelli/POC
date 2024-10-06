@@ -2,10 +2,9 @@
 import { describe, it, expect, beforeEach, vi } from 'vitest';
 import request from 'supertest';
 import express from 'express';
-import { findAll, findOne, add, update, remove, sanitizeCharacterInput } from '../../src/character/character.controller'; // Ruta corregida
-import { orm } from '../../src/shared/db/orm'; // Ruta corregida
+import { findAll, findOne, add, update, remove, sanitizeCharacterInput } from '@/character/character.controler.js'; // Ruta corregida
 import { Character } from '../../src/character/character.entity'; // Ruta corregida
-import { EntityManager } from '@mikro-orm/mysql';
+
 
 const emMock = {
   find: vi.fn(),
@@ -17,7 +16,9 @@ const emMock = {
   removeAndFlush: vi.fn(),
 };
 
-orm.em = emMock as unknown as EntityManager;
+vi.mock('../../src/character/character.repository', () => ({
+  CharacterRepository: vi.fn(() => emMock),
+}));
 
 const app = express();
 app.use(express.json());
