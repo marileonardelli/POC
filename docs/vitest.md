@@ -87,7 +87,7 @@ Una herramienta que se construye pensando en Vite desde el principio, aprovechan
 Diseñado para ser rápido, Vitest utiliza Vite, lo que permite una recarga
 instantánea y una ejecución rápida de pruebas.
 
-## Soporte para TypeScript
+### Soporte para TypeScript
 Integración nativa con TypeScript, facilitando pruebas en proyectos que lo
 utilizan.
 
