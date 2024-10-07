@@ -8,53 +8,49 @@ A continuación se muestra una tabla con los tiempos de ejecución individuales 
 
 | Prueba                     | Tiempo de Ejecución (ms) |
 |----------------------------|--------------------------|
-| `math.test.ts`             | 5 ms                     |
-| `stringOperations.test.ts` | 7 ms                     |
-| `arrayOperations.test.ts`  | 12 ms                    |
-| **Total**                  | **24 ms**                |
+| `sumh.test.ts`             | 13 ms                    |
+| `array.test.ts`            | 13 ms                    |
+| `character.controller.test.ts`  | 25 ms                    |
+| **Total**                  | **51 ms**                |
 
 ### Observaciones sobre Tiempos
-- El tiempo total de ejecución para todas las pruebas es de **24 ms**, lo cual es extremadamente eficiente en comparación con otros frameworks.
+- El tiempo promedio total de ejecución para todas las pruebas es de **53 ms** (Falta que lo hagan las demás tecnologias para comparar)
 - Vitest aprovecha al máximo la velocidad de Vite para ejecutar las pruebas en tiempo real, manteniendo tiempos de arranque bajos y una ejecución rápida.
 
 ## Cobertura de Código
 Vitest genera un reporte de cobertura detallado, lo cual es crucial para evaluar la efectividad de las pruebas. A continuación se muestra un resumen de la cobertura obtenida:
 
-| Tipo de Cobertura  | Porcentaje |
-|--------------------|------------|
-| **Líneas**         | 98%        |
-| **Funciones**      | 95%        |
-| **Ramas**          | 92%        |
-| **Declaraciones**  | 96%        |
+
+Archivo                          | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s
+-------------------------------|---------|----------|---------|---------|-------------------
+All files                      |     100 |      100 |     100 |     100 | 
+ character                     |     100 |      100 |     100 |     100 | 
+  character.controller.test.ts |     100 |      100 |     100 |     100 | 
+ integration                   |     100 |      100 |     100 |     100 | 
+  array.test.ts                |     100 |      100 |     100 |     100 | 
+ unit                          |     100 |      100 |     100 |     100 | 
+  sum.test.ts                  |     100 |      100 |     100 |     100 | 
 
 ### Observaciones sobre Cobertura
-- La cobertura de líneas es del **98%**, lo cual indica que la mayor parte del código está siendo probado.
-- Las ramas cubiertas llegan al **92%**, un resultado positivo, aunque se podría mejorar para asegurarse de que todas las condiciones posibles estén cubiertas.
+- La cobertura de líneas es del **100%**, lo cual indica que todo el código está siendo probado.
+- Las ramas cubiertas llegan al **100%**, lo que significa que todas las posibles rutas de ejecución están siendo evaluadas.
 
 ## Análisis de Rendimiento
 Vitest se destaca por su rendimiento en proyectos de desarrollo moderno. Algunas conclusiones claves sobre su rendimiento son:
 
 - **Velocidad**: Vitest es extremadamente rápido al ejecutar pruebas, beneficiándose de su integración nativa con Vite.
 - **Escalabilidad**: El rendimiento de Vitest sigue siendo alto incluso en proyectos más grandes, donde las pruebas pueden aumentar significativamente en número.
-- **Comparación con otros frameworks**: En comparación con Jest o Mocha, Vitest ofrece una ventaja notable en la velocidad de arranque y ejecución de pruebas debido a su optimización con Vite.
+- **Comparación con otros frameworks**: !(Falta que lo hagan las demás tecnologias para comparar)1
 
 ## Comparativa con Otros Frameworks
 | Framework      | Tiempo de Ejecución (ms) | Cobertura de Código (%) |
 |----------------|--------------------------|-------------------------|
-| **Vitest**     | 24 ms                    | 98%                     |
-| **Jest**       | 45 ms                    | 97%                     |
-| **Mocha**      | 50 ms                    | 95%                     |
+| **Vitest**     | 51 ms                    | 100%                     |
+| **Jest**       |  ms                    | %                     |
+| **Mocha**      |  ms                    | %                     |
 
 ### Observaciones Comparativas
-- Vitest es considerablemente más rápido que Jest y Mocha en términos de tiempos de ejecución, especialmente en proyectos pequeños y medianos.
-- La cobertura de código es competitiva, pero Vitest sigue liderando con ligeras mejoras en el porcentaje de líneas y declaraciones cubiertas.
-
-## Gráficos y Visualización
-A continuación se muestra un gráfico que compara el rendimiento de Vitest en relación con otros frameworks de pruebas populares:
-
-![Comparación de Rendimiento](../assets/vitest-performance-graph.png)
-
-Este gráfico visualiza las diferencias en tiempos de ejecución, con Vitest superando a otros frameworks como Jest y Mocha.
+- Vitest destaca por su rapidez y eficiencia en la ejecución de pruebas, con tiempos de ejecución bajos y una cobertura del 100%.
 
 ## Conclusiones
 Vitest es una opción excelente para proyectos que ya utilizan Vite o desean aprovechar una solución moderna y rápida para pruebas de JavaScript. Su facilidad de uso, junto con su alto rendimiento, lo convierte en una de las mejores opciones para entornos de desarrollo modernos.
