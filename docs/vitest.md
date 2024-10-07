@@ -74,7 +74,11 @@ pnpm run test
 
 ---
 
-El uso de Vite dev server para transformar sus archivos durante los testing permite la creación de un corredor simple que no necesita lidiar con la complejidad de transformar archivos fuente y solo puede concentrarse en proporcionar el mejor DX durante las pruebas. Un test runner que utiliza la misma configuración de su aplicación (a través de vite.config.js), compartiendo un proceso de transformación común durante el tiempo de desarrollo, construcción y prueba. Esto es extensible con la misma API de complemento que le permite a usted y a los mantenedores de sus herramientas proporcionar una integración de primera clase con Vite. Una herramienta que se construye pensando en Vite desde el principio, aprovechando sus mejoras en DX, como su Hot Module Reload (HMR) instantáneo. Este es Vitest, un marco de pruebas de próxima generación impulsado por Vite.
+El uso de Vite dev server para transformar sus archivos durante los testing permite la creación de un corredor simple que no necesita lidiar con la complejidad de transformar archivos fuente y solo puede concentrarse en proporcionar el mejor DX durante las pruebas. 
+
+Un test runner que utiliza la misma configuración de su aplicación (a través de vite.config.js), compartiendo un proceso de transformación común durante el tiempo de desarrollo, construcción y prueba. Esto es extensible con la misma API de complemento que le permite a usted y a los mantenedores de sus herramientas proporcionar una integración de primera clase con Vite. 
+
+Una herramienta que se construye pensando en Vite desde el principio, aprovechando sus mejoras en DX, como su Hot Module Reload (HMR) instantáneo. Este es Vitest, un marco de pruebas de próxima generación impulsado por Vite.
 
 ---
 
