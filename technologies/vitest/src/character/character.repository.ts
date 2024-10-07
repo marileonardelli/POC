@@ -12,6 +12,16 @@ const characters = [
     ['Lightsaber', 'Death Star'],
     '1234'
   ),
+  new Character(
+    'Yoda',
+    'Jedi',
+    12,
+    120,
+    25,
+    12,
+    ['Lightsaber', 'Wisdom'],
+    '9101'
+  )
 ]
 
 export class CharacterRepository implements Repository<Character> {

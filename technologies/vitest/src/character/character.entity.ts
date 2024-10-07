@@ -9,6 +9,6 @@ export class Character {
     public mana: number,
     public attack: number,
     public items: string[],
-    public id = generateId()
+    public id: string 
   ) {}
 }

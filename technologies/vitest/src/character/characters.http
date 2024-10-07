@@ -3,20 +3,20 @@ GET http://localhost:3000/api/characters
 
 
 ### obtener un character
-GET http://localhost:3000/api/characters/a02b91bc-3769-4221-beb1-d7a3aeba7dad
+GET http://localhost:3000/api/characters/1234
 
 ### crear un nuevo character
 POST http://localhost:3000/api/characters
 Content-Type: application/json
 
 {
-  "name": "Atila",
-  "characterClass": "warrior",
-  "items": ["bow","arrow"],
-  "attack": 10,
-  "mana": 10,
-  "hp": 10,
-  "level": 1
+  "name": "Leia Organa",
+  "characterClass": "Rebel Leader",
+  "items": ["Blaster", "Diplomacy"],
+  "attack": 35,
+  "mana": 80,
+  "hp": 120,
+  "level": 15
 }
 
 ### modificar un character (PUT - recurso completo e idempotente)
@@ -45,4 +45,4 @@ Content-Type: application/json
 }
 
 ### borrar un character
-DELETE http://localhost:3000/api/characters/a02b91bc-3769-4221-beb1-d7a3aeba7dad
+DELETE http://localhost:3000/api/characters/d4603036-fbb6-4041-9197-be225e6845f9

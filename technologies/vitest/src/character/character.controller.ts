@@ -13,6 +13,7 @@ function sanitizeCharacterInput(req: Request, res: Response, next: NextFunction)
     mana: req.body.mana,
     attack: req.body.attack,
     items: req.body.items,
+    id: req.body.id
   }
   //more checks here
 
@@ -47,11 +48,12 @@ function add(req: Request, res: Response) {
     input.hp,
     input.mana,
     input.attack,
-    input.items
+    input.items,
+    input.id
   )
 
-  const character = repository.add(characterInput)
-  return res.status(201).send({ message: 'Character created', data: character })
+  repository.add(characterInput)
+  return res.status(201).send({ message: 'Character created', data: { ...characterInput } })
 }
 
 function update(req: Request, res: Response) {
