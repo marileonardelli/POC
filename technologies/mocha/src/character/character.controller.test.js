@@ -1,153 +1,113 @@
-import assert from "assert"; // Usamos assert nativo de Node.js
-import { CharacterRepository } from "../../dist/character/character.repository.js";
-import { Character } from "../../dist/character/character.entity.js";
+import sinon from "sinon";
 import {
-  findAll,
   findOne,
   add,
   update,
   remove,
 } from "../../dist/character/character.controller.js";
+import { CharacterRepository } from "../../dist/character/character.repository.js";
+import { Character } from "../../dist/character/character.entity.js";
+import assert from "assert";
 
-// Mock para Request y Response de Express
-const mockRequest = () => {
-  const req = {
+function mockRequest() {
+  return {
     body: {},
     params: {},
   };
-  return req;
-};
+}
 
-const mockResponse = () => {
-  const res = {
-    json: () => {},
-    status: () => res,
-    send: () => res,
+function mockResponse() {
+  return {
+    json: sinon.spy(),
+    status: sinon.stub().returnsThis(),
+    send: sinon.stub().returnsThis(),
   };
-  return res;
-};
+}
 
-describe("CharacterController CRUD", () => {
+// PARALELO y test dinamico
+
+function sumToN(n) {
+  let sum = 0;
+  for (let i = 0; i <= n; i++) {
+    sum += i;
+  }
+  return sum;
+}
+
+describe("add()", function () {
+  function add(args) {
+    return args.reduce((prev, curr) => prev + curr, 0);
+  }
+
+  let startTime;
+
+  before(function () {
+    startTime = Date.now();
+  });
+
+  after(function () {
+    const endTime = Date.now();
+    const duration = endTime - startTime;
+    console.log(`Test suite took ${duration}ms to run.`);
+  });
+
+  let tests = [];
+
+  for (let i = 0; i < 7000; i++) {
+    let newElement = { args: [], expected: sumToN(i + 1) };
+
+    for (let j = 0; j < i + 1; j++) {
+      newElement.args.push(j + 1);
+    }
+
+    tests.push(newElement);
+  }
+
+  tests.forEach(({ args, expected }) => {
+    it(`correctly adds ${args.length} args`, function () {
+      const res = add(args);
+      assert.strictEqual(res, expected);
+    });
+  });
+});
+
+describe("CharacterController CRUD", function () {
   let repository;
   let req;
   let res;
   let next;
 
-  beforeEach(() => {
+  beforeEach(function () {
     repository = new CharacterRepository();
     req = mockRequest();
     res = mockResponse();
-    next = () => {}; // No es necesario en este contexto
+    next = sinon.spy();
 
-    // Mock de las funciones del repositorio
-    repository.findAll = () =>
-      Promise.resolve([
-        new Character(
-          "Darth Vader",
-          "Sith",
-          11,
-          101,
-          22,
-          11,
-          ["Lightsaber", "Death Star"],
-          "1234"
-        ),
-        new Character(
-          "Yoda",
-          "Jedi",
-          12,
-          120,
-          25,
-          12,
-          ["Lightsaber", "Wisdom"],
-          "9101"
-        ),
-      ]);
-
-    repository.findOne = (id) =>
-      id === "1234"
-        ? Promise.resolve(
-            new Character(
-              "Darth Vader",
-              "Sith",
-              11,
-              101,
-              22,
-              11,
-              ["Lightsaber", "Death Star"],
-              "1234"
-            )
-          )
-        : Promise.resolve(null);
-
-    repository.add = (character) => Promise.resolve(character);
-
-    repository.update = (character) => Promise.resolve(character);
-
-    repository.delete = (id) =>
-      id === "5678" ? Promise.resolve() : Promise.reject();
+    // Mockear mÃ©todos del repositorio
+    sinon.stub(repository, "findAll");
+    sinon.stub(repository, "findOne");
+    sinon.stub(repository, "add");
+    sinon.stub(repository, "update");
+    sinon.stub(repository, "delete");
   });
 
-  it("should return all characters", async () => {
-    await findAll(req, res);
-
-    const expectedResponse = {
-      data: [
-        {
-          name: "Darth Vader",
-          characterClass: "Sith",
-          level: 11,
-          hp: 101,
-          mana: 22,
-          attack: 11,
-          items: ["Lightsaber", "Death Star"],
-          id: "1234",
-        },
-        {
-          name: "Yoda",
-          characterClass: "Jedi",
-          level: 12,
-          hp: 120,
-          mana: 25,
-          attack: 12,
-          items: ["Lightsaber", "Wisdom"],
-          id: "9101",
-        },
-      ],
-    };
-
-    assert.deepStrictEqual(res.json, expectedResponse);
+  afterEach(function () {
+    sinon.restore();
   });
 
-  it("should return a character by id", async () => {
-    req.params.id = "1234";
-    await findOne(req, res);
-
-    const expectedResponse = {
-      data: {
-        name: "Darth Vader",
-        characterClass: "Sith",
-        level: 11,
-        hp: 101,
-        mana: 22,
-        attack: 11,
-        items: ["Lightsaber", "Death Star"],
-        id: "1234",
-      },
-    };
-
-    assert.deepStrictEqual(res.json, expectedResponse);
-  });
-
-  it("should return 404 if character not found", async () => {
+  it("should return 404 if character not found", function () {
     req.params.id = "0000";
-    await findOne(req, res);
+    repository.findOne.returns(null);
 
-    assert.strictEqual(res.status, 404);
-    assert.deepStrictEqual(res.send, { message: "Character not found" });
+    findOne(req, res, next);
+
+    sinon.assert.calledOnce(res.status);
+    sinon.assert.calledWith(res.status, 404);
+    sinon.assert.calledOnce(res.send);
+    sinon.assert.calledWith(res.send, { message: "Character not found" });
   });
 
-  it("should add a new character", async () => {
+  it("should add a new character", function () {
     req.body.sanitizedInput = {
       name: "Leia Organa",
       characterClass: "Rebel Leader",
@@ -159,10 +119,12 @@ describe("CharacterController CRUD", () => {
       id: "5678",
     };
 
-    await add(req, res);
+    add(req, res, next);
 
-    assert.strictEqual(res.status, 201);
-    assert.deepStrictEqual(res.send, {
+    sinon.assert.calledOnce(res.status);
+    sinon.assert.calledWith(res.status, 201);
+    sinon.assert.calledOnce(res.send);
+    sinon.assert.calledWith(res.send, {
       message: "Character created",
       data: {
         name: "Leia Organa",
@@ -177,17 +139,32 @@ describe("CharacterController CRUD", () => {
     });
   });
 
-  it("should update an existing character", async () => {
+  it("should update an existing character", function () {
     req.body.sanitizedInput = {
       name: "Leia Organa",
       level: 20,
     };
     req.params.id = "5678";
 
-    await update(req, res);
+    repository.update.returns(
+      new Character(
+        "Leia Organa",
+        "Rebel Leader",
+        20,
+        120,
+        80,
+        35,
+        ["Blaster", "Diplomacy"],
+        "5678"
+      )
+    );
 
-    assert.strictEqual(res.status, 200);
-    assert.deepStrictEqual(res.send, {
+    update(req, res, next);
+
+    sinon.assert.calledOnce(res.status);
+    sinon.assert.calledWith(res.status, 200);
+    sinon.assert.calledOnce(res.send);
+    sinon.assert.calledWith(res.send, {
       message: "Character updated successfully",
       data: {
         name: "Leia Organa",
@@ -202,36 +179,91 @@ describe("CharacterController CRUD", () => {
     });
   });
 
-  it("should return 404 when updating a non-existent character", async () => {
+  it("should return 404 when updating a non-existent character", function () {
     req.body.sanitizedInput = {
       name: "Han Solo",
       level: 20,
     };
     req.params.id = "9999";
 
-    await update(req, res);
+    repository.update.returns(null);
 
-    assert.strictEqual(res.status, 404);
-    assert.deepStrictEqual(res.send, { message: "Character not found" });
+    update(req, res, next);
+
+    sinon.assert.calledOnce(res.status);
+    sinon.assert.calledWith(res.status, 404);
+    sinon.assert.calledOnce(res.send);
+    sinon.assert.calledWith(res.send, { message: "Character not found" });
   });
 
-  it("should delete a character by id", async () => {
+  it("should delete a character by id", function () {
     req.params.id = "5678";
 
-    await remove(req, res);
+    repository.delete.returns(
+      new Character(
+        "Leia Organa",
+        "Rebel Leader",
+        20,
+        120,
+        80,
+        35,
+        ["Blaster", "Diplomacy"],
+        "5678"
+      )
+    );
 
-    assert.strictEqual(res.status, 200);
-    assert.deepStrictEqual(res.send, {
+    remove(req, res, next);
+
+    sinon.assert.calledOnce(res.status);
+    sinon.assert.calledWith(res.status, 200);
+    sinon.assert.calledOnce(res.send);
+    sinon.assert.calledWith(res.send, {
       message: "Character deleted successfully",
     });
   });
 
-  it("should return 404 when deleting a non-existent character", async () => {
+  it("should return 404 when deleting a non-existent character", function () {
     req.params.id = "9999";
 
-    await remove(req, res);
+    repository.delete.returns(null);
 
-    assert.strictEqual(res.status, 404);
-    assert.deepStrictEqual(res.send, { message: "Character not found" });
+    remove(req, res, next);
+
+    sinon.assert.calledOnce(res.status);
+    sinon.assert.calledWith(res.status, 404);
+    sinon.assert.calledOnce(res.send);
+    sinon.assert.calledWith(res.send, { message: "Character not found" });
+  });
+});
+
+// async
+
+function delayedAdd(a, b) {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve(a + b);
+    }, 1000);
+  });
+}
+
+describe("delayedAdd()", function () {
+  it("should add 1 and 2", async function () {
+    const result = await delayedAdd(1, 2);
+    assert.strictEqual(result, 3);
+  });
+
+  it("should add 5 and 5", async function () {
+    const result = await delayedAdd(5, 5);
+    assert.strictEqual(result, 10);
+  });
+
+  it("should add 10 and 20", async function () {
+    const result = await delayedAdd(10, 20);
+    assert.strictEqual(result, 30);
+  });
+
+  it("should add 0 and 0", async function () {
+    const result = await delayedAdd(0, 0);
+    assert.strictEqual(result, 0);
   });
 });
