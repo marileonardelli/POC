@@ -103,11 +103,37 @@ ejecutan las pruebas. Esto permite que Vitest ofrezca una interfaz atractiva par
 e interactuar con tus pruebas.
 
 
-
-## Empresa que lo avala
+## Principales sponsors y contribuidores
 
 Vitest es desarrollado y mantenido por la comunidad y se basa en el trabajo
 de Vite, una herramienta creada por Evan You, el creador de Vue.js.
+
+## Sponsors
+
+### Vladimir Sponsors
+
+<p align="center">
+  <a href="https://cdn.jsdelivr.net/gh/sheremet-va/static/sponsors.svg">
+    <img src='https://cdn.jsdelivr.net/gh/sheremet-va/static/sponsors.svg'/>
+  </a>
+</p>
+
+### Anthony Fu Sponsors
+
+<p align="center">
+  <a href="https://cdn.jsdelivr.net/gh/antfu/static/sponsors.svg">
+    <img src='https://cdn.jsdelivr.net/gh/antfu/static/sponsors.svg'/>
+  </a>
+</p>
+
+### Patak Sponsors
+
+<p align="center">
+  <a href="https://cdn.jsdelivr.net/gh/patak-dev/static/sponsors.svg">
+    <img src='https://cdn.jsdelivr.net/gh/patak-dev/static/sponsors.svg'/>
+  </a>
+</p>
+
 
 ## Curva de aprendizaje
 
@@ -155,14 +181,23 @@ Vitest ha ganado popularidad rápidamente, especialmente entre los
 desarrolladores que usan Vite y Vue. Gracias a que es familiar de Vite la comunidad 
 es activa, y se pueden encontrar discusiones y soporte en foros y en GitHub.
 
+<img>![Vitest](https://img.shields.io/npm/dm/vitest)</img>
+
+<img>![Vitest](https://img.shields.io/github/last-commit/vitest-dev/vitest)</img>
+
+
+<img>![Vitest](https://img.shields.io/npm/v/vitest)</img>
+
 ## Demanda y uso en el mercado
 Aunque es relativamente nuevo, su demanda está creciendo, especialmente
 entre los proyectos que utilizan Vite y frameworks modernos como Vue y
 React. Es cada vez más adoptado en proyectos nuevos.
 
+La [extensión](https://marketplace.visualstudio.com/items?itemName=vitest.explorer) de VS Code tiene actualmente 192k de descargas
 
-La extensión de VS Code tiene 172k de descargas 
-En github lo utilizan 311k 
+En github lo utilizan 311k <img>![Vitest](https://img.shields.io/github/stars/vitest-dev/vitest)</img> <img> ![Vitest](https://img.shields.io/github/forks/vitest-dev/vitest)</img> <img>![Vitest](https://img.shields.io/github/issues/vitest-dev/vitest)</img> <img>![Vitest](https://img.shields.io/github/last-commit/vitest-dev/vitest)</img>
+
+
 
 ## ¿Admiten end to end? / Alcance
 
