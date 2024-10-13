@@ -25,11 +25,11 @@ Archivo                          | % Stmts | % Branch | % Funcs | % Lines | Unco
 -------------------------------|---------|----------|---------|---------|-------------------
 All files                      |     100 |      100 |     100 |     100 | 
  character                     |     100 |      100 |     100 |     100 | 
-  character.controller.test.ts |     100 |      100 |     100 |     100 | 
+  `character.controller.test.ts` |     100 |      100 |     100 |     100 | 
  integration                   |     100 |      100 |     100 |     100 | 
-  array.test.ts                |     100 |      100 |     100 |     100 | 
+  `array.test.ts`                |     100 |      100 |     100 |     100 | 
  unit                          |     100 |      100 |     100 |     100 | 
-  sum.test.ts                  |     100 |      100 |     100 |     100 | 
+  `sum.test.ts`                  |     100 |      100 |     100 |     100 | 
 
 ### Observaciones sobre Cobertura
 - La cobertura de líneas es del **100%**, lo cual indica que todo el código está siendo probado.
