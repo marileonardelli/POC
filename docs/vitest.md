@@ -3,77 +3,6 @@
 ## Descripción
 Vitest es un framework de pruebas rápido, basado en Vite, que permite ejecutar pruebas unitarias, de integración y de componentes. Se destaca por su velocidad y su fácil integración con proyectos modernos de JavaScript, especialmente aquellos basados en **Vite**.
 
-## Instalación
-Para instalar Vitest en tu proyecto, ejecuta el siguiente comando:
-
-```bash
-npm install -D vitest
-
-```
-```bash
-pnpm add -D vitest
-
-```
-
-> [!IMPORTANT]
-> Vitest requiere Vite >=v5.0.0 y Node >=v18.0.0
-
-
-## Configuración básica 
-Agrega un script en el archivo `package.json` para ejecutar Vitest:
-
-```json
-{
-  "scripts": {
-    "test": "vitest"
-  }
-}
-
-```
-
-También puedes crear un archivo de configuración `vitest.config.ts` si necesitas configuraciones personalizadas:
-```typescript
-import { defineConfig } from 'vitest/config';
-
-export default defineConfig({
-  test: {
-    globals: true,
-    environment: 'jsdom',
-  },
-});
-```
-## Ejemplo de uso
-Este es un ejemplo básico utilizado en el [get started](https://vitest.dev/guide/#writing-tests) de Vitest:
-
-```typescript
-// math.ts
-export function sum(a: number, b: number): number {
-  return a + b;
-}
-
-// math.test.ts
-import { sum } from './math';
-import { describe, it, expect } from 'vitest';
-
-describe('sum', () => {
-  it('debería sumar dos números correctamente', () => {
-    expect(sum(1, 2)).toBe(3);
-  });
-});
-```
-
-Para ejecutar las pruebas, utiliza el siguiente comando:
-
-```bash
-npm run test
-```
-
-```bash
-pnpm run test
-```
-
----
-
 El uso de Vite dev server para transformar sus archivos durante los testing permite la creación de un corredor simple que no necesita lidiar con la complejidad de transformar archivos fuente y solo puede concentrarse en proporcionar el mejor DX durante las pruebas. 
 
 Un test runner que utiliza la misma configuración de su aplicación (a través de vite.config.js), compartiendo un proceso de transformación común durante el tiempo de desarrollo, construcción y prueba. Esto es extensible con la misma API de complemento que le permite a usted y a los mantenedores de sus herramientas proporcionar una integración de primera clase con Vite. 
@@ -105,7 +34,6 @@ Permite realizar pruebas de instantáneas para componentes y otros elementos.
 Impulsado por Vite, Vitest también cuenta con un servidor de desarrollo cuando se 
 ejecutan las pruebas. Esto permite que Vitest ofrezca una interfaz atractiva para ver 
 e interactuar con tus pruebas.
-
 
 
 ## Empresa que lo avala
@@ -181,6 +109,74 @@ integrarse en flujos de trabajo existentes que utilicen Jest o Mocha. En caso de
 pruebas con React o angular también se complementa muy bien con Testing 
 Library.
 
+## Instalación
+Para instalar Vitest en tu proyecto, ejecuta el siguiente comando:
+
+```bash
+npm install -D vitest
+
+```
+```bash
+pnpm add -D vitest
+
+```
+
+> [!IMPORTANT]
+> Vitest requiere Vite >=v5.0.0 y Node >=v18.0.0
+
+
+## Configuración básica 
+Agrega un script en el archivo `package.json` para ejecutar Vitest:
+
+```json
+{
+  "scripts": {
+    "test": "vitest"
+  }
+}
+
+```
+
+También puedes crear un archivo de configuración `vitest.config.ts` si necesitas configuraciones personalizadas:
+```typescript
+import { defineConfig } from 'vitest/config';
+
+export default defineConfig({
+  test: {
+    globals: true,
+    environment: 'jsdom',
+  },
+});
+```
+## Ejemplo de uso
+Este es un ejemplo básico utilizado en el [get started](https://vitest.dev/guide/#writing-tests) de Vitest:
+
+```typescript
+// math.ts
+export function sum(a: number, b: number): number {
+  return a + b;
+}
+
+// math.test.ts
+import { sum } from './math';
+import { describe, it, expect } from 'vitest';
+
+describe('sum', () => {
+  it('debería sumar dos números correctamente', () => {
+    expect(sum(1, 2)).toBe(3);
+  });
+});
+```
+
+Para ejecutar las pruebas, utiliza el siguiente comando:
+
+```bash
+npm run test
+```
+
+```bash
+pnpm run test
+```
 
 ## Conclusión
 Dado el gran nivel de adopción de Jest, Vitest ofrece una API compatible que te
