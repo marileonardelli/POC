@@ -41,7 +41,7 @@ Este repositorio está dedicado a la exploración, comparación y evaluación de
 
 ## Cómo Usar
 
-Cada directorio dentro de technologies/ contiene ejemplos y configuraciones para una suite de pruebas específica. Sigue las instrucciones en el directorio correspondiente para ejecutar las pruebas de cada framework. El objetivo es permitir que los usuarios ejecuten y comparen fácilmente estas suites de pruebas en diferentes tipos de aplicaciones.
+Cada directorio dentro de technologies/ contiene ejemplos y configuraciones para una suite de pruebas específica. Sigue las instrucciones en el directorio correspondiente para ejecutar las pruebas de cada framework. 
 
 ### Ejecutando un Ejemplo de Test Suite
 
