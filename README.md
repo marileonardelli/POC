@@ -16,8 +16,8 @@ Este repositorio está dedicado a la exploración, comparación y evaluación de
 | Framework                  | Lenguaje      | Tipo                | Descripción                                             |
 |----------------------------|---------------|---------------------|---------------------------------------------------------|
 | **Jest**                   | JavaScript    | Unitarias/Integración| Framework para pruebas en aplicaciones JavaScript, fácil de configurar y usar. |
-| **Vitest**                 | JavaScript    | Unitarias/Integración| Rápido framework de pruebas basado en Vite para aplicaciones modernas. |
-| **Mocha**                  | JavaScript    | Pruebas Unitarias    | Framework flexible de pruebas para JavaScript que permite diversas configuraciones. |
+| **Vitest**                 | TypeScript    | Unitarias/Integración| Rápido framework de pruebas basado en Vite para aplicaciones modernas. |
+| **Mocha**                  | TypeScript    | Pruebas Unitarias    | Framework flexible de pruebas para JavaScript que permite diversas configuraciones. |
 | **Mock Service Worker**     | JavaScript    | Simulación de APIs   | Herramienta para simular servicios y APIs en aplicaciones, útil para pruebas de integración. |
 | **Testing Library**         | JavaScript    | Pruebas Unitarias/Integración| Conjunto de herramientas para probar la interacción con la interfaz de usuario. |
 | **TestCafe**               | JavaScript    | Pruebas E2E          | Framework para pruebas end-to-end de aplicaciones web, fácil de usar y configurar. |
