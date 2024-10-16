@@ -23,12 +23,8 @@ Vitest genera un reporte de cobertura detallado, lo cual es crucial para evaluar
 
 Archivo                          | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s
 -------------------------------|---------|----------|---------|---------|-------------------
-All files                      |     100 |      100 |     100 |     100 | 
- character                     |     100 |      100 |     100 |     100 | 
   `character.controller.test.ts` |     100 |      100 |     100 |     100 | 
- integration                   |     100 |      100 |     100 |     100 | 
   `array.test.ts`                |     100 |      100 |     100 |     100 | 
- unit                          |     100 |      100 |     100 |     100 | 
   `sum.test.ts`                  |     100 |      100 |     100 |     100 | 
 
 ### Observaciones sobre Cobertura
