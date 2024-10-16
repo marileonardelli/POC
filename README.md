@@ -75,7 +75,7 @@ Clona el repositorio e instala las dependencias de cada suite de pruebas que des
 
 ```bash
 
-git clone https://github.com/tu-usuario/investigacion-test-suites.git
+git clone git@github.com:tu-usuario/POC.git
 
 ```
 
@@ -87,9 +87,4 @@ Hemos incluido casos de prueba que cubren diferentes tipos de pruebas:
 
 - Pruebas Unitarias: Se enfocan en probar unidades o componentes individuales en aislamiento.
 - Pruebas de Integración: Verifican que los componentes funcionen juntos como se espera.
-- Pruebas End-to-End: Simulan interacciones de usuario y prueban la aplicación en su totalidad.
-
-
-## Licencia
-
-Este proyecto está licenciado bajo la Licencia MIT - consulta el archivo LICENSE para más detalles.
+- Pruebas CRUD: Simulan interacciones de usuario y prueban el controlador que permite realizar las operaciones CRUD de una clase
