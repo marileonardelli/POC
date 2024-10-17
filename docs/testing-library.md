@@ -218,7 +218,7 @@ Es una herramienta diferente, ya que está orientada a pruebas end-to-end (E2E).
 | Mocha        | Pruebas unitarias, integradas, asíncronas | - Modular, requiere bibliotecas adicionales (Chai, Sinon)<br>- Flexible y personalizable | Se puede integrar con Testing Library, pero necesita configuración adicional. |
 | TestCafe     | Pruebas end-to-end (E2E)              | - No requiere Selenium<br>- Fácil de configurar<br>- Soporte para ejecución en paralelo | Puede usarse junto con Testing Library para mejorar la simulación de interacciones accesibles en pruebas E2E. |
 
-###Conslusión
+### Conclusión
 
 Testing Library es una herramienta diseñada para realizar pruebas centradas en la interacción real del usuario con la interfaz de una aplicación web, dejando de lado los detalles internos de la implementación. Su filosofía se basa en probar cómo un usuario final utilizaría la aplicación, lo que lo convierte en una opción ideal para asegurar una experiencia de usuario accesible y libre de errores.
 
