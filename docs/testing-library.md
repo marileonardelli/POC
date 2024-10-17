@@ -215,4 +215,31 @@ test: "jest",
 coverage: "jest --coverage"
 ```
 
+## Comparacion
+Jest, Vitest, Mocha y TestCafe son herramientas populares en el ecosistema JavaScript para realizar pruebas, pero cada una tiene enfoques y características distintas. Por su parte, Testing Library se utiliza generalmente como un complemento para ayudar a interactuar con el DOM y crear pruebas centradas en la accesibilidad y en la experiencia del usuario. A continuación vamos a analizar sus diferencias y la relación que tienen con Testing Library.
 
+### Jest 
+Es un framework de pruebas todo en uno que se utiliza ampliamente en el desarrollo de aplicaciones JavaScript, particularmente en entornos React. Su principal ventaja es que incluye varias características de fábrica, como soporte para mocking, spies, y pruebas de instantáneas (snapshots). También es fácil de configurar, lo que lo hace accesible para principiantes. Jest se encarga de ejecutar las pruebas y manejar su entorno, mientras que Testing Library se integra con Jest para hacer pruebas sobre el DOM de manera accesible y centrada en el usuario. Testing Library aporta herramientas para hacer pruebas de UI más confiables y fáciles de mantener.
+
+### Vitest 
+Es una herramienta más reciente que se presenta como una alternativa ligera y rápida a Jest. Vitest está diseñado para trabajar en entornos Vite, que es un bundler moderno y rápido. Una de las principales ventajas de Vitest es su compatibilidad con el reemplazo en caliente de módulos (HMR), lo que permite una experiencia de pruebas más rápida durante el desarrollo. Aunque Vitest y Jest comparten muchas similitudes, Vitest destaca por su velocidad y por ser más flexible en proyectos que ya utilizan Vite. Al igual que con Jest, Testing Library se puede utilizar con Vitest para realizar pruebas orientadas al DOM, lo que combina lo mejor de ambos mundos: rapidez y simplicidad en el entorno de pruebas.
+
+### Mocha 
+Es otro framework de pruebas muy popular, aunque se diferencia de Jest y Vitest por ser más modular. Mocha es conocido por su flexibilidad y su capacidad de personalización, permitiendo a los desarrolladores elegir bibliotecas adicionales como Chai para las aserciones o Sinon para el mocking. A diferencia de Jest o Vitest, Mocha no viene con todas estas herramientas integradas, lo que puede requerir una configuración más avanzada. Testing Library puede integrarse con Mocha, pero necesitarás usar bibliotecas adicionales para las aserciones y mocking, haciendo la experiencia de configuración un poco más compleja. Sin embargo, Mocha sigue siendo una excelente opción para aquellos que necesitan un control más granular sobre sus pruebas.
+
+### TestCafe 
+Es una herramienta diferente, ya que está orientada a pruebas end-to-end (E2E). A diferencia de Jest, Vitest o Mocha, que se centran en pruebas unitarias y de integración, TestCafe se usa para simular la interacción completa de un usuario a través de un navegador, probando la funcionalidad completa de la aplicación. TestCafe no requiere configuraciones adicionales como Selenium o WebDriver, lo que lo hace fácil de configurar. Sin embargo, no es una herramienta que se integre directamente con Testing Library, ya que su enfoque está en un nivel diferente de pruebas. Mientras Testing Library se usa para pruebas unitarias e integradas, TestCafe prueba la aplicación completa desde la perspectiva del usuario final.
+
+### Resumen en puntos:
+- __Jest:__ Framework todo en uno para pruebas unitarias, con soporte nativo para mocking, spies y snapshots. Fácil de integrar con Testing Library para pruebas de UI.
+- __Vitest:__ Alternativa moderna y rápida a Jest, optimizada para proyectos que usan Vite. Integra bien con Testing Library para pruebas del DOM.
+- __Mocha:__ Framework modular y flexible que requiere bibliotecas adicionales para mocking y aserciones. Puede integrarse con Testing Library, pero su configuración es más compleja.
+- __TestCafe:__ Herramienta orientada a pruebas end-to-end que simula interacciones del usuario en navegadores. No se usa directamente con Testing Library ya que está orientada a pruebas completas de la aplicación.
+- __Testing Library:__ Se utiliza en combinación con frameworks como Jest, Vitest o Mocha para realizar pruebas centradas en la interacción del usuario con el DOM, proporcionando herramientas accesibles y enfocadas en buenas prácticas de pruebas.
+
+| Herramienta  | Enfoque y Tipos de Testing             | Características Clave                                           | Relación con Testing Library                                     |
+|--------------|----------------------------------------|----------------------------------------------------------------|-----------------------------------------------------------------|
+| Jest         | Pruebas unitarias, integradas, snapshots | - Todo en uno (incluye mocking, spies, snapshots)             | Se integra fácilmente para pruebas de UI centradas en el usuario. |
+| Vitest       | Pruebas unitarias, integradas, orientado a Vite | - Alta velocidad<br>- Soporte para HMR<br>- Ligero y rápido     | Compatible con Testing Library para pruebas rápidas y eficientes en entornos Vite. |
+| Mocha        | Pruebas unitarias, integradas, asíncronas | - Modular, requiere bibliotecas adicionales (Chai, Sinon)<br>- Flexible y personalizable | Se puede integrar con Testing Library, pero necesita configuración adicional. |
+| TestCafe     | Pruebas end-to-end (E2E)              | - No requiere Selenium<br>- Fácil de configurar<br>- Soporte para ejecución en paralelo | Puede usarse junto con Testing Library para mejorar la simulación de interacciones accesibles en pruebas E2E. |
