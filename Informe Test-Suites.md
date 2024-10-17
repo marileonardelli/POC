@@ -336,7 +336,10 @@ Testing Library es una herramienta de código abierto, por lo que la comunidad e
 <img>![Jest](https://img.shields.io/npm/v/jest)</img>
 
 ## Mocha
+Mocha recibe actualizaciones frecuentemente(cada pocos meses) para arreglar bugs e implementar/mejorar ciertas características. Estas son en gran parte gracias a la comunidad (la cual es muy activa), ya que Mocha es open source.
+
 La última versión de Mocha (10.7.3) fue desplegada el 9 de agosto del corriente año. Posee 491 contribuyentes actualmente.
+
 <img>![Mocha](https://img.shields.io/github/last-commit/mochajs/mocha)</img>
 <img>![Mocha](https://img.shields.io/npm/v/mocha)</img>
 
