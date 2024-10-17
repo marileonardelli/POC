@@ -271,8 +271,9 @@ Documentación: [Jest Documentation](https://jestjs.io/docs/getting-started)
  
 
 ## Mocha
-El repositorio oficial de Mocha está disponible en GitHub: https://github.com/mochajs/mocha
+El repositorio oficial de Mocha está disponible en GitHub: [Mocha Repo](https://github.com/mochajs/mocha)
 
+Documentación: [Mocha Documentation](https://mochajs.org)
 
 # Soporte y actualizaciones
 ## Vitest
