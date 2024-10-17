@@ -209,7 +209,7 @@ TestCafe fue creado por DevExpress es una empresa de software que se especializa
 
 ## Testing-Library
 
-(Falta agregar sponsors)
+Testing Library no tiene sponsors tradicionales como algunas otras bibliotecas de código abierto. En su lugar, es mantenida principalmente por contribuciones de la comunidad y algunos patrocinadores individuales a través de plataformas como GitHub Sponsors.
 
 ## Jest
 Jest es desarrollado y mantenido principalmente por Meta (anteriormente Facebook). Está diseñado principalmente para trabajar con proyectos de React, aunque su alcance se ha extendido a otros entornos.
