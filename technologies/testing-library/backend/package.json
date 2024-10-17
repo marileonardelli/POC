@@ -1,11 +1,11 @@
 {
-  "name": "testing-library",
+  "name": "backend",
   "version": "1.0.0",
   "type": "module",
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start:dev": "tsc-watch --noClear -p ./tsconfig.json --onSuccess \"node ./dist/app.js\""
+    "start": "tsc-watch --noClear -p ./tsconfig.json --onSuccess \"node ./dist/app.js\""
   },
   "keywords": [],
   "author": "",

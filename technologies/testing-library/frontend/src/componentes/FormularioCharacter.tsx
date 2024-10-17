@@ -26,7 +26,7 @@ const CharacterForm: React.FC<CharacterFormProps> = ({ onSubmit }) => {
     };
 
     try {
-      const response = await axios.post('/api/characters', newCharacter);
+      const response = await axios.post('https:localhost5000/api/characters', newCharacter);
       onSubmit(response.data);
       // Limpiar el formulario
       setName('');

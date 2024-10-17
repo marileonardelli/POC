@@ -1,5 +1,5 @@
 import { render, screen, fireEvent } from '@testing-library/react';
-import '@testing-library/jest-dom/extend';
+import "@testing-library/jest-dom";
 import App from '../App';
 import axios from 'axios';
 
@@ -15,10 +15,10 @@ describe('App Component', () => {
   test('renders title and button', async () => {
     render(<App />);
     
-  
+    //@ts-ignore
     expect(screen.getByText(/Formulario para Agregar Character/i)).toBeInTheDocument();
     
-    
+    //@ts-ignore
     expect(screen.getByRole('button', { name: /Show Success Message/i })).toBeInTheDocument();
   });
 
@@ -28,7 +28,7 @@ describe('App Component', () => {
     
     fireEvent.click(screen.getByRole('button', { name: /Show Success Message/i }));
 
-    
-    expect(await screen.findByText(/Character added successfully!/i)).toBeInTheDocument();
+    //@ts-ignore
+    expect(await screen.findByText(/Character agregado!/i)).toBeInTheDocument();
   });
 });
