@@ -489,3 +489,11 @@ Podemos destacar el alto grado de flexibilidad de este framework, como así tamb
 Ahora bien, es importante tener en cuenta que Mochajs no se encuentra respaldado por empresas extremadamente conocidas en el mundo de la tecnología, y además, posee una documentación poco amigable para el usuario. 
 
 Es por estos motivos que elegimos utilizar Mocha js exclusivamente en casos en los que la flexibilidad del testing, o la performance, sean puntos fundamentales a tener en cuenta a la hora de realizar los tests.
+## Casos de uso ideal
+| Tecnología    | Fortalezas                                                                 | Debilidades                                                    | Caso de Uso Ideal                        |
+|-------------------|--------------------------------------------------------------------------------|--------------------------------------------------------------------|---------------------------------------------|
+| Vitest        | Compatible con Jest, rápido (hilos de trabajo), ligera, modo watch predeterminado | Menos adoptado en proyectos que no usan Vite                        | Proyectos con Vite o que priorizan el rendimiento |
+| TestCafe      | Fácil de usar, documentación clara, accesible, activo en la comunidad           | Limitado en pruebas unitarias                                        | Pruebas de UI, especialmente para principiantes  |
+| Testing Library| (Por agregar conclusión)                                                        | (Por agregar conclusión)                                             | (Por agregar conclusión)                    |
+| Jest          | API rica en funciones, bien documentado, mantenimiento activo, ampliable         | Pesado, puede ser excesivo para pequeños proyectos                   | Grandes proyectos con amplias necesidades de testing |
+| Mocha         | Altamente flexible, permite paralelismo, velocidad                              | Documentación menos accesible, sin respaldo corporativo fuerte       | Proyectos que requieren alta flexibilidad o rendimiento |
