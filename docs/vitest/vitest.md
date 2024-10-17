@@ -215,21 +215,15 @@ pnpm run test
 
 
 ## Conclusión
-Dado el gran nivel de adopción de Jest, Vitest ofrece una API compatible que te
-permite usarlo como un reemplazo directo en la mayoría de los proyectos. También
-incluye las características más comunes que se requieren al configurar pruebas
-unitarias (mocking, snapshots, cobertura). Vitest se preocupa mucho por el
-rendimiento y utiliza hilos de trabajo (Worker threads) para ejecutar la mayor
-cantidad de tareas posibles en paralelo. En algunos casos, las pruebas se ejecutan
-hasta diez veces más rápido. El modo de observación (watch mode) está habilitado
-por defecto, alineándose con la filosofía de Vite de priorizar una experiencia de
-desarrollo optimizada. Incluso con todas estas mejoras en la experiencia del
-desarrollador, Vitest sigue siendo ligero al seleccionar cuidadosamente sus
+Dado el gran nivel de adopción de Jest, Vitest ofrece una API compatible que te permite usarlo como un reemplazo directo en la mayoría de los proyectos. 
+
+También incluye las características más comunes que se requieren al configurar pruebas unitarias (mocking, snapshots, cobertura). Vitest se preocupa mucho por el rendimiento y utiliza hilos de trabajo (Worker threads) para ejecutar la mayor cantidad de tareas posibles en paralelo. En algunos casos, las pruebas se ejecutan hasta diez veces más rápido. 
+
+El modo de observación (watch mode) está habilitado por defecto, alineándose con la filosofía de Vite de priorizar una experiencia de desarrollo optimizada. Incluso con todas estas mejoras en la experiencia del desarrollador, Vitest sigue siendo ligero al seleccionar cuidadosamente sus
 dependencias (o integrando directamente las partes necesarias).
 
 Vitest busca posicionarse como la opción preferida para ejecutar pruebas en
-proyectos de Vite, y como una alternativa sólida incluso para proyectos que no
-utilizan Vite.
+proyectos de Vite, y como una alternativa sólida incluso para proyectos que no utilizan Vite.
 
 
 ## Comandos útiles

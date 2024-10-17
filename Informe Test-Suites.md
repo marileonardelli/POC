@@ -428,4 +428,44 @@ Testing Library es una herramienta de pruebas centrada en el usuario que se util
 No está diseñado para E2E nativo: Jest se enfoca principalmente en pruebas unitarias y de integración. Aunque se puede usar en conjunto con otros frameworks (como Puppeteer o Playwright) para pruebas end-to-end, no es su propósito principal. Para E2E, herramientas especializadas como TestCafe o Cypress suelen ser preferidas.
 
 ## Mocha
-Mocha se utiliza principalmente para pruebas unitarias e integradas en aplicaciones Node.js, puede ser combinado con otras herramientas que están diseñadas específicamente para pruebas E2E. Para esto, Mocha suele necesitar ser complementado con herramientas que simulen el comportamiento de los usuarios en navegadores o entornos completos de aplicación.
+Mocha se utiliza principalmente para pruebas unitarias e integradas en aplicaciones Node.js, puede ser combinado con otras herramientas que están diseñadas específicamente para pruebas E2E. 
+
+Para esto, Mocha suele necesitar ser complementado con herramientas que simulen el comportamiento de los usuarios en navegadores o entornos completos de aplicación.
+
+
+# Conclusiones
+## Vitest
+Dado el gran nivel de adopción de Jest, Vitest ofrece una API compatible que te permite usarlo como un reemplazo directo en la mayoría de los proyectos. 
+
+También incluye las características más comunes que se requieren al configurar pruebas unitarias (mocking, snapshots, cobertura). Vitest se preocupa mucho por el rendimiento y utiliza hilos de trabajo (Worker threads) para ejecutar la mayor cantidad de tareas posibles en paralelo. En algunos casos, las pruebas se ejecutan hasta diez veces más rápido. 
+
+El modo de observación (watch mode) está habilitado por defecto, alineándose con la filosofía de Vite de priorizar una experiencia de desarrollo optimizada. Incluso con todas estas mejoras en la experiencia del desarrollador, Vitest sigue siendo ligero al seleccionar cuidadosamente sus
+dependencias (o integrando directamente las partes necesarias).
+
+Vitest busca posicionarse como la opción preferida para ejecutar pruebas en
+proyectos de Vite, y como una alternativa sólida incluso para proyectos que no utilizan Vite.
+
+## TestCafe
+Concluimos que tiene una buena documentación y es intuitivo de usar, realiza rápidamente las acciones que le indicamos y los mensajes de errores son claros. 
+
+Este test es altamente efectivo y accesible dada la baja curva de aprendizaje y la amplia documentación que tiene, este tipo de test es una opción atractiva tanto para principiantes como para desarrolladores avanzados. 
+
+Las actualizaciones se adaptan a las tendencias actuales por lo que termina siendo una herramienta valiosa para las pruebas actualizadas. 
+Por último, su enfoque en la comunidad a través del repositorio de código abierto y soporte activo asegura que los usuarios puedan ver actualizaciones continuas y puedan aportar para mejorar.
+
+## Testing-Library
+(Agregar conclusion)
+
+## Jest
+Jest es un marco de pruebas de JavaScript diseñado para garantizar la corrección de cualquier código base de JavaScript. Te permite escribir pruebas con una API accesible, familiar y rica en funciones que te brinda resultados rápidamente.
+
+Jest está bien documentado, requiere poca configuración y puede ampliarse para adaptarse a sus requisitos.
+
+En resumen, Jest es una de las herramientas más completas y populares para pruebas en el ecosistema JavaScript, con un soporte y mantenimiento sólido por parte de Meta y una comunidad activa que facilita su adopción y evolución.
+
+## Mocha
+Podemos destacar el alto grado de flexibilidad de este framework, como así también la velocidad que nos aporta poder correr tests en paralelo. Sumado a eso posee una comunidad sólida, y se están desplegando nuevas actualizaciones frecuentemente.
+
+Ahora bien, es importante tener en cuenta que Mochajs no se encuentra respaldado por empresas extremadamente conocidas en el mundo de la tecnología, y además, posee una documentación poco amigable para el usuario. 
+
+Es por estos motivos que elegimos utilizar Mocha js exclusivamente en casos en los que la flexibilidad del testing, o la performance, sean puntos fundamentales a tener en cuenta a la hora de realizar los tests.

@@ -10,7 +10,7 @@ A continuación se muestra una tabla con los tiempos de ejecución individuales 
 |----------------------------|--------------------------|
 | `sumh.test.ts`             | 13 ms                    |
 | `array.test.ts`            | 13 ms                    |
-| `character.controller.test.ts`  | 25 ms                    |
+| `character.controller.test.ts`  | 25 ms               |
 | **Total**                  | **51 ms**                |
 
 ### Observaciones sobre Tiempos
@@ -43,7 +43,7 @@ Vitest se destaca por su rendimiento en proyectos de desarrollo moderno. Algunas
 |----------------|--------------------------|-------------------------|
 | **Vitest**     | 51 ms                    | 100%                     |
 | **Jest**       |  ms                    | %                     |
-| **Mocha**      |  ms                    | %                     |
+| **Mocha**      |  ms                    | No posee                   |
 
 ### Observaciones Comparativas
 - Vitest destaca por su rapidez y eficiencia en la ejecución de pruebas, con tiempos de ejecución bajos y una cobertura del 100%.
