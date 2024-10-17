@@ -45,9 +45,7 @@ Al ser gratuito y de código abierto, fomenta la colaboración y las contribucio
 
 TestCafe fue creado por DevExpress es una empresa de software que se especializa en crear herramientas de desarrollo y componentes de interfaz de usuario (UI) para diversas plataformas.
 
-Al ser un framework de código abierto tiene varios contribuidores, algunos  de los más destacados son: 
 
----
 
 ## Curva de aprendizaje 
 La curva de aprendizaje es relativamente baja, especialmente para aquellos que ya poseen familiaridad con lenguajes que utilizan etiquetas, como por ejemplo HTML. Dado que su sintaxis es similar a la de los scripts en JavaScript, quienes ya cuenten con conocimientos en este último encontrarán que el proceso de aprendizaje es aún más sencillo.

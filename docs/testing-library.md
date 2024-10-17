@@ -1,7 +1,10 @@
 # Testing Library
 
-## ¿Qué es React Testing Library?
-React Testing Library es una biblioteca que proporciona utilidades para realizar pruebas de componentes React. Su enfoque se centra en probar la aplicación tal como la experimentaría un usuario, es decir, interactuando con los componentes de la misma manera que lo haría un usuario real. Esta filosofía se alinea perfectamente con el principio de diseño de React que promueve la creación de interfaces de usuario declarativas y comprensibles.
+## ¿Qué es Testing Library?
+
+Testing Library es un conjunto de herramientas para probar interfaces de usuario en aplicaciones web. Está diseñado para ayudar a los desarrolladores a escribir pruebas más enfocadas en cómo los usuarios interactúan con la aplicación, en lugar de detalles internos de implementación. Testing Library facilita la simulación de acciones del usuario, como hacer clic en botones, escribir en formularios, o navegar entre elementos, y está diseñado para funcionar bien con frameworks como React, Angular, y Vue.
+
+La filosofía de Testing Library es centrarse en la accesibilidad y en probar el comportamiento real de la aplicación desde la perspectiva del usuario final.
 
 ## Tipos De Testing
 Testing Library es una herramienta diseñada principalmente para realizar pruebas de integración y pruebas funcionales (o de usuario) en aplicaciones web, aunque también puede usarse para algunas pruebas unitarias. A continuación, se presentan los principales tipos de pruebas que se pueden realizar con Testing Library:
@@ -14,8 +17,6 @@ Testing Library es una herramienta diseñada principalmente para realizar prueba
 
 ![Imagen de WhatsApp 2024-10-16 a las 21 40 24_048533b8](https://github.com/user-attachments/assets/b5c6cbbe-4f63-46dc-9ff6-ae2e497b4028)
 
-![Imagen de WhatsApp 2024-10-16 a las 21 40 54_633c5513](https://github.com/user-attachments/assets/09d30e4c-e1d0-4431-aa04-a333666c3dae)
-
 
 ## Demanda y uso en el mercado
 Las testing libraries son ampliamente utilizadas (dependiendo del framework de testing) en la industria debido a su papel crucial en el aseguramiento de la calidad. Estas herramientas permiten detectar y corregir errores en etapas tempranas del desarrollo, lo que reduce costos y tiempos de rectificación a largo plazo. Además, facilitan la creación de código más limpio y mantenible, ya que los desarrolladores pueden probar y refactorizar sin temor a romper funcionalidades existentes. Su uso no solo es común, sino que se ha convertido en una expectativa en proyectos profesionales.
@@ -25,44 +26,10 @@ Testing Library en si no tiene muchas complicaciones. Depende de la experiencia 
 ### Tecnologías, lenguajes y conocimientos previos necesarios:
 
 - JavaScript/ES6:
-
-__Nivel:__ Intermedio
-
-Testing Library es una biblioteca basada en JavaScript, por lo que los usuarios necesitan tener un buen entendimiento de JavaScript, incluyendo características de ES6 como arrow functions, promises y desestructuración.
-
-__Complejidad:__ Si no estás familiarizado con async/await y promises, probar código asíncrono (como solicitudes de red) podría ser complicado.
-
-- React
-
-__Nivel:__ Intermedio
-
-Dado que la biblioteca de pruebas se utiliza para probar los componentes de React, es esencial comprender cómo funciona, incluidos los enlaces, el estado de los componentes y los métodos del ciclo de vida.
-
-__Complejidad:__ Comprender cómo simular y probar componentes con estado o efectos secundarios en React puede resultar difícil para los principiantes.
-
-- Node.js y npm
-
-__Nivel:__ Fácil
-
-Se necesita Node.js para ejecutar el entorno de prueba e instalar la biblioteca de pruebas usando npm o yarm.
-
-__Complejidad:__ Si no se está familiarizado con npm o cómo configurar scripts, es posible que se tenga dificultades con la configuración inicial.
-
+- Framerowks Frontend de JavaScript
+- Node.js y npm/pnpm
 - Jest (u otros Test Runners)
-
-__Nivel:__ Intermedio
-
-Aunque Testing Library es independiente de las pruebas, a menudo se utiliza con Jest como el ejecutor de pruebas. Jest gestiona archivos de prueba, ejecuta las pruebas y proporciona utilidades como el mocking y los snapshots.
-
-__Complejidad:__ Aprender la sintaxis específica de Jest y cómo configurarla con la biblioteca de pruebas (por ejemplo,mock functions, snapshots) requiere de tiempo.
-
 - DOM APIs
-
-__Nivel:__ Básico  
-
-La Testing Library interactúa con el DOM, simulando interacciones del usuario final (como hacer clic o escribir). Los conocimientos básicos de cómo funciona el DOM (elementos, eventos, etc.) ayudarán.
-
-__Complejidad:__ Comprender cómo dirigirse a los elementos utilizando 'getBy', 'queryBy' y otras funciones de consulta puede llevar algún tiempo para aquellos que no están familiarizados con la estructura del DOM.
 
 #### Dificultad general:
 Para un desarrollador con experiencia intermedia en React, JavaScript y Jest, Testing Library será relativamente sencillo. Sin embargo, puede ser un desafío para los principiantes debido a: 
@@ -76,7 +43,7 @@ Para un desarrollador con experiencia intermedia en React, JavaScript y Jest, Te
 - __Ahorro de tiempo y recursos:__ Puede parecer que crear tests consuma tiempo y recursos, pero es todo lo contrario. Es una inversión que te ahorra tiempo a largo plazo y también dolores de cabeza. Si se solucionan problemas en una etapa temprana del desarrollo el proceso va a ser más rápido y económico que hacerlo después.
 - __Facilita el mantenimiento:__ Un software bien probado y estructurado es más fácil de mantener y actualizar. Tener tests permite garantizar que si hay actualizaciones de librerías que se estén utilizando o cambios en los Apis y servicios que están siendo consumidos no introduzcan nuevos errores en el sistema. Esto ayuda a mantener la estabilidad del software a lo largo del tiempo.
 - __Satisfacción:__ El resultado mejora la satisfacción del usuario final si se tiene una aplicación web que funciona correctamente, satisface las necesidades del usuario y no tiene errores imprevistos genera una experiencia más satisfactoria en el cliente. Esto aumenta la retención de los usuarios en la plataforma, genera opiniones positivas y recomendaciones.
-- __Confianza en el equipo de desarrollo:__  Tener tests que aborden los principales problemas que pueden ocurrir así como que se aseguren de que cumplen las expectativas, a los desarrolladores les proporciona una mayor confianza en el trabajo diario. Pudiendo hacer refactoring, añadir nuevas funcionalidades sin miedo a que colapse algo.
+- __Confianza en el equipo de desarrollo:__  Tener tests que aborden los principales problemas que pueden ocurrir así como que se aseguren de que cumplen las expectativas, a los desarrolladores les proporciona una mayor confianza en el trabajo diario. Pudiendo hacer refactoring, añadir nuevas funcionalidade sin miedo a que colapse algo.
 
 
 ## Comunidad
@@ -91,7 +58,14 @@ La comunidad de Testing Library es bastante activa y está centrada en el ecosis
 5. Cursos y tutoriales: Algunos miembros de la comunidad han producido cursos y tutoriales que se pueden encontrar en plataformas como YouTube, Egghead.io, y Udemy.
 
 
-Explorar estas plataformas y mantenerse involucrado con la comunidad puede ayudar a aprovechar mejor Testing Library y mejorar las habilidades de testing en aplicaciones React o cualquier otro framework.
+En conclusio la comunidad es muy activa y aprender testing library puede ser muy facil gracias a la gran variedad de contenido acerca de este, ya que se cuenta con contenidos tanto escritos como audiovisuales.
+
+
+## Frameworks que lo utilizan
+
+![Imagen de WhatsApp 2024-10-16 a las 21 40 54_633c5513](https://github.com/user-attachments/assets/09d30e4c-e1d0-4431-aa04-a333666c3dae)
+
+En este informe hemos optado por React ya que su enfoque basado en componentes nos permite desarrollar interfaces más eficientes y mantenibles. Además, su flexibilidad nos da libertad para integrar otras herramientas cuando sea necesario. La gran comunidad que lo respalda nos asegura soporte y acceso constante a nuevas actualizaciones, lo que facilita la resolución de problemas.
 
 ## Como instalarlo
 ### Instalación básica
@@ -206,7 +180,7 @@ Esto hará que Eslint reconozca el código Jest
 ```
 6. Agregar scripts de prueba
 
-En el `package.json` agregue los siguientes scripts:
+En el `package.json` agregamos los siguientes scripts:
 
 ``` json
 scripts:{

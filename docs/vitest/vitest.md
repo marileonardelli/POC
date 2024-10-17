@@ -41,7 +41,6 @@ e interactuar con tus pruebas.
 Vitest es desarrollado y mantenido por la comunidad y se basa en el trabajo
 de Vite, una herramienta creada por Evan You, el creador de Vue.js.
 
-## Sponsors
 
 ### Vladimir Sponsors
 
