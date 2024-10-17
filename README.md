@@ -16,8 +16,8 @@ Este repositorio está dedicado a la exploración, comparación y evaluación de
 | Framework                  | Lenguaje      | Tipo                | Descripción                                             |
 |----------------------------|---------------|---------------------|---------------------------------------------------------|
 | **Jest**                   | JavaScript    | Unitarias/Integración| Framework para pruebas en aplicaciones JavaScript, fácil de configurar y usar. |
-| **Vitest**                 | JavaScript    | Unitarias/Integración| Rápido framework de pruebas basado en Vite para aplicaciones modernas. |
-| **Mocha**                  | JavaScript    | Pruebas Unitarias    | Framework flexible de pruebas para JavaScript que permite diversas configuraciones. |
+| **Vitest**                 | TypeScript    | Unitarias/Integración| Rápido framework de pruebas basado en Vite para aplicaciones modernas. |
+| **Mocha**                  | TypeScript    | Pruebas Unitarias    | Framework flexible de pruebas para JavaScript que permite diversas configuraciones. |
 | **Mock Service Worker**     | JavaScript    | Simulación de APIs   | Herramienta para simular servicios y APIs en aplicaciones, útil para pruebas de integración. |
 | **Testing Library**         | JavaScript    | Pruebas Unitarias/Integración| Conjunto de herramientas para probar la interacción con la interfaz de usuario. |
 | **TestCafe**               | JavaScript    | Pruebas E2E          | Framework para pruebas end-to-end de aplicaciones web, fácil de usar y configurar. |
@@ -41,7 +41,7 @@ Este repositorio está dedicado a la exploración, comparación y evaluación de
 
 ## Cómo Usar
 
-Cada directorio dentro de technologies/ contiene ejemplos y configuraciones para una suite de pruebas específica. Sigue las instrucciones en el directorio correspondiente para ejecutar las pruebas de cada framework. El objetivo es permitir que los usuarios ejecuten y comparen fácilmente estas suites de pruebas en diferentes tipos de aplicaciones.
+Cada directorio dentro de technologies/ contiene ejemplos y configuraciones para una suite de pruebas específica. Sigue las instrucciones en el directorio correspondiente para ejecutar las pruebas de cada framework. 
 
 ### Ejecutando un Ejemplo de Test Suite
 
@@ -75,7 +75,7 @@ Clona el repositorio e instala las dependencias de cada suite de pruebas que des
 
 ```bash
 
-git clone https://github.com/tu-usuario/investigacion-test-suites.git
+git clone git@github.com:tu-usuario/POC.git
 
 ```
 
@@ -87,9 +87,4 @@ Hemos incluido casos de prueba que cubren diferentes tipos de pruebas:
 
 - Pruebas Unitarias: Se enfocan en probar unidades o componentes individuales en aislamiento.
 - Pruebas de Integración: Verifican que los componentes funcionen juntos como se espera.
-- Pruebas End-to-End: Simulan interacciones de usuario y prueban la aplicación en su totalidad.
-
-
-## Licencia
-
-Este proyecto está licenciado bajo la Licencia MIT - consulta el archivo LICENSE para más detalles.
+- Pruebas CRUD: Simulan interacciones de usuario y prueban el controlador que permite realizar las operaciones CRUD de una clase
