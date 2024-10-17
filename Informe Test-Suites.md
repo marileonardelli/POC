@@ -147,7 +147,7 @@ Jest proporciona pruebas instantáneas, lo que ayuda a garantizar que la interfa
 
 ## Mocha
 ### Soporte incluido para el debugger de Node
-Aunque no lo pudimos hacer andar
+Posee soporte, pero no fue posible hacerlo funcionar luego de reiterados intentos.
 
 ### Pruebas sincrónicas y asincrónicas
 Mocha soporta tanto pruebas sincrónicas como asincrónicas. Es posible manejar las pruebas asincrónicas utilizando callbacks, promesas y async/await
@@ -216,8 +216,18 @@ Jest es desarrollado y mantenido principalmente por Meta (anteriormente Facebook
 
 ## Mocha
 Los principales sponsors de Mocha son las empresas Localize y Route4Me. Adicionalmente está respaldado por colaboradores financieros. Estos son los principales sponsors de Mocha:
- 
-(Agregar imagen del doc de mocha)
+
+ <p align="center">
+  <a href="https://localizejs.com">
+    <img src='https://mochajs.org/images/supporters/zzaxon79-3jy8gpl5-83qbrkde-mwl5v04o.png?sprite=sponsors'/>
+  </a>
+ </p>
+ <p align="center">
+     <a href="https://route4me.com/es">
+    <img src='https://mochajs.org/images/supporters/3k0exgzn-m8yj64gk-jr865wao-9r7b4dlv.png?sprite=sponsors'/>
+  </a>
+</p>
+
 
 # Curva de aprendizaje
 ## Vitest
@@ -226,7 +236,7 @@ que ya están familiarizados con Vite o con herramientas de pruebas como
 Jest. Su sintaxis es similar a la de Jest, lo que facilita la transición.
 
 ## TestCafe
-La curva de aprendizaje es relativamente baja, especialmente para aquellos que ya poseen familiaridad con lenguajes que utilizan etiquetas, como por ejemplo HTML. Dado que su sintaxis es similar a la de los scripts en JavaScript, quienes ya cuenten con conocimientos en este último encontrarán que el proceso de aprendizaje es aún más sencillo.
+La curva de aprendizaje es relativamente baja, especialmente para aquellos que ya poseen familiaridad con lenguajes que utilizan etiquetas, como por ejemplo HTML. Dado que su sintaxis es similar a la de los scripts en JavaScript, quienes ya cuenten con conocimientos en este último encontrarán que el proceso de aprendizaje es aún más sencillo. 
 
 ## Testing-Library
 Testing Library en si no tiene muchas complicaciones. Depende de la experiencia del desarrollador y cuán familiarizado está con tecnologías específicas. Para aquellos que estén experimentados con Js, React, etc. La curva de aprendizaje será leve. Caso contrario para aquellos nuevos desarrolladores en las pruebas de Frontend o React.
@@ -370,8 +380,6 @@ En el último tiempo, Mocha ha ido perdiendo popularidad, como se puede evidenci
 <img>![Mocha](https://img.shields.io/github/stars/mochajs/mocha)</img>
 <img>![Mocha](https://img.shields.io/github/forks/mochajs/mocha)</img>
 <img>![Mocha](https://img.shields.io/github/issues/mochajs/mocha)</img>
-
-(Agregar imagen del doc de mocha)
 
 
 # Demanda y uso en el mercado
