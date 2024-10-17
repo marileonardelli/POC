@@ -381,6 +381,12 @@ En el último tiempo, Mocha ha ido perdiendo popularidad, como se puede evidenci
 <img>![Mocha](https://img.shields.io/github/forks/mochajs/mocha)</img>
 <img>![Mocha](https://img.shields.io/github/issues/mochajs/mocha)</img>
 
+En términos de comunidad, tienen un servidor de discord en el que contestan dudas.
+
+<a href="https://discord.gg/KeDn2uXhER">
+  <img src="https://img.shields.io/badge/chat-Discord-5765F2.svg" alt="Mocha Discord">
+</a>
+
 
 # Demanda y uso en el mercado
 ## Vitest
