@@ -1,4 +1,10 @@
 # Descripción de las distintas tecnologías
+
+## Introducción
+En el presente trabajo realizamos una comparación entre diversas tecnologías de testing que son ampliamente utilizadas en el desarrollo de software actual. Para ello, llevamos a cabo un análisis detallado de las siguientes herramientas: Vitest, TestCafe, Testing Library, Jest y Mocha. Cada una de ellas ofrece diferentes enfoques y features, que las hacen más o menos adecuadas dependiendo del tipo de pruebas a realizar, ya sean unitarias, de integración o pruebas end-to-end.
+
+A lo largo del informe, se detallan las principales fortalezas y debilidades de cada herramienta, así como su curva de aprendizaje, nivel de integración con otras bibliotecas o frameworks, y el soporte que tienen dentro a comunidad de desarrollo. Además, se ofrece una comparación directa entre ellas, destacando en qué contextos cada una resulta más conveniente. El objetivo es generar una noción clara y fundamentada de estas herramientas, con el fin de ayudar a la toma de decisiones a la hora de seleccionar la tecnología según las especificaciones y requerimientos de cada proyecto en particular.
+
 ## Vitest 
 Vitest es un framework de pruebas rápido, basado en Vite, que permite ejecutar pruebas unitarias, de integración y de componentes. Se destaca por su velocidad y su fácil integración con proyectos modernos de JavaScript, especialmente aquellos basados en **Vite**.
 
