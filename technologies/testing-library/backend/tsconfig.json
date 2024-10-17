@@ -9,15 +9,15 @@
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "strict": true,
-    "baseUrl": ".",
+    "baseUrl": ".",  
     "paths": {
-      "@/*": ["src/*"]
+      "@/*": ["*"] 
     },
     "alwaysStrict": true,
     "skipLibCheck": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true
   },
-  "include": ["src/**/*", "**/*.ts", "tests/**/*.ts"],
+  "include": ["*/*", "**/*.ts", "tests/**/*.ts", "tsconfig.json", "shared", "character"],
   "exclude": ["node_modules"]
 }

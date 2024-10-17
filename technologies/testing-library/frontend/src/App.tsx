@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import {act} from '@testing-library/react';
 import FormularioCharacter from './componentes/FormularioCharacter';
 import axios from 'axios';
 
@@ -16,7 +17,9 @@ const App: React.FC = () => {
   const fetchCharacters = async () => {
     try {
       const response = await axios.get('/api/characters');
-      setCharacters(response.data);
+      act(() => {
+        setCharacters(response.data);
+      })
     } catch (error) {
       console.error('Error :', error);
     }
