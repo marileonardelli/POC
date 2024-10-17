@@ -217,3 +217,13 @@ Es una herramienta diferente, ya que está orientada a pruebas end-to-end (E2E).
 | Vitest       | Pruebas unitarias, integradas, orientado a Vite | - Alta velocidad<br>- Soporte para HMR<br>- Ligero y rápido     | Compatible con Testing Library para pruebas rápidas y eficientes en entornos Vite. |
 | Mocha        | Pruebas unitarias, integradas, asíncronas | - Modular, requiere bibliotecas adicionales (Chai, Sinon)<br>- Flexible y personalizable | Se puede integrar con Testing Library, pero necesita configuración adicional. |
 | TestCafe     | Pruebas end-to-end (E2E)              | - No requiere Selenium<br>- Fácil de configurar<br>- Soporte para ejecución en paralelo | Puede usarse junto con Testing Library para mejorar la simulación de interacciones accesibles en pruebas E2E. |
+
+###Conslusión
+
+Testing Library es una herramienta diseñada para realizar pruebas centradas en la interacción real del usuario con la interfaz de una aplicación web, dejando de lado los detalles internos de la implementación. Su filosofía se basa en probar cómo un usuario final utilizaría la aplicación, lo que lo convierte en una opción ideal para asegurar una experiencia de usuario accesible y libre de errores.
+
+Creemos que Testing Library es una herramienta fundamental para el desarrollo de aplicaciones web. Su enfoque en cómo los usuarios interactúan con la interfaz nos permite crear pruebas más relevantes y efectivas.
+
+Valoramos sea de facil uso y que se integre bien con frameworks populares como React, Angular y Vue. Además, cuenta con una comunidad muy activa que ofrece recursos y actualizaciones constantes, lo que simplifica su aprendizaje y uso. 
+
+En comparación con otras herramientas de pruebas como Jest o Vitest tienden a centrarse en la ejecución técnica de las pruebas, Testing Library complementa estas herramientas al poner énfasis en cómo los usuarios reales interactúan con la interfaz. En definitiva, consideramos que lo convierte en una opción esencial para garantizar que las aplicaciones sean coherentes, accesibles y funcionales en escenarios del mundo real, mejorando tanto la experiencia del usuario como la calidad del producto final.
