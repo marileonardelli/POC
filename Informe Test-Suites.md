@@ -1,5 +1,27 @@
 # Descripción de las distintas tecnologías
 
+## Glosario
+
+Testing: El Testing de Software es toda una disciplina en la ingeniería de software permite tener procesos, métodos de trabajo y herramientas para identificar defectos en el software alcanzando un proceso de estabilidad del mismo
+
+Test Suites: es una colección de casos de prueba que están destinados a probar un programa de software para demostrar que tiene un conjunto específico de comportamientos.
+
+Pruebas Unitarias: Se enfocan en probar unidades o componentes individuales en aislamiento.
+
+Pruebas de Integración: Verifican que los componentes funcionen juntos como se espera.
+
+Pruebas CRUD: Simulan interacciones de usuario y prueban el controlador que permite realizar las operaciones CRUD de una clase
+
+Prueba E2E: Evalúan el sistema completo desde el punto de vista del usuario final. Simulan interacción del usuario con una aplicación web, para garantizar que los flujos de trabajo principales funcionen como se espera.
+
+Mock: es un objeto simulado que se utiliza para probar el comportamiento de otro objeto. Se crea para que se comporte de una manera específica durante las pruebas, simulando respuestas y comportamientos. Se utilizan para comprobar si un método fue llamado de la forma esperada, cuántas veces fue llamado y si devolvió la respuesta esperada.
+
+Spy: es un objeto que envuelve a una instancia real, permitiendo espiar y verificar las interacciones con esa instancia mientras se mantiene su comportamiento original.
+A diferencia de los mocks, los spies no reemplazan el objeto real completamente, sino que pueden combinar el comportamiento real con la capacidad de monitorear las llamadas a los métodos.
+
+Assert: es una herramienta utilizada para verificar que una condición específica sea verdadera durante la ejecución de un test.
+
+
 ## Introducción
 En el presente trabajo realizamos una comparación entre diversas tecnologías de testing que son ampliamente utilizadas en el desarrollo de software actual. Para ello, llevamos a cabo un análisis detallado de las siguientes herramientas: Vitest, TestCafe, Testing Library, Jest y Mocha. Cada una de ellas ofrece diferentes enfoques y features, que las hacen más o menos adecuadas dependiendo del tipo de pruebas a realizar, ya sean unitarias, de integración o pruebas end-to-end.
 
