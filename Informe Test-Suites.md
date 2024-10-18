@@ -161,7 +161,7 @@ Se integra fácilmente con TypeScript para proyectos que usan tipado estático.
 ### Watch mode
 Modo que ejecuta automáticamente pruebas al detectar cambios en los archivos relevantes.
 
-### Burla 
+### Mock 
 Jest permite a los desarrolladores simular dependencias, lo que hace más fácil aislar y probar componentes individuales. Utiliza un solucionador personalizado para las importaciones en sus pruebas, lo que facilita la simulación de cualquier objeto fuera del alcance de su prueba. Puede utilizar importaciones simuladas con la rica API
 
 ### Instantáneas
