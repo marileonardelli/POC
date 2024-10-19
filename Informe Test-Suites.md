@@ -65,7 +65,7 @@ Jest es un framework de pruebas completo para Javascript, que incluye un motor d
 
 ## Mocha
 
-Mocha es un test Framework de JavaScript que corre en Node.js y en el bowser.
+Mocha es un test Framework de JavaScript que corre en Node.js y en el bowser. Las pruebas en Mocha se ejecutan de manera secuencial, lo que permite una mayor flexibilidad y reportes precisos, a la vez que asigna las excepciones no capturadas a los casos de prueba correctos. Es compatible con una variedad de bibliotecas de aserciones (como Chai) y herramientas de "mocking" y "stubbing".
 
 # Principales Features
 
