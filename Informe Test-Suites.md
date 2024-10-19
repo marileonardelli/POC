@@ -1,5 +1,12 @@
 # Descripción de las distintas tecnologías
 
+## Integrantes 
+
+Pacienzia Bruno 50235
+Pennice Lucas 50977
+Genovese María Clara 50979
+
+
 ## Glosario
 
 **Testing**: El Testing de Software es toda una disciplina en la ingeniería de software permite tener procesos, métodos de trabajo y herramientas para identificar defectos en el software alcanzando un proceso de estabilidad del mismo
