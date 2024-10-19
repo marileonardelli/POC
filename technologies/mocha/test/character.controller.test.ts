@@ -1,81 +1,39 @@
+import { assert, expect } from "chai";
 import sinon from "sinon";
 import {
   findOne,
   add,
   update,
   remove,
-} from "../../dist/character/character.controller.js";
-import { CharacterRepository } from "../../dist/character/character.repository.js";
-import { Character } from "../../dist/character/character.entity.js";
-import assert from "assert";
+  findAll,
+} from "../src/character/character.controller.js";
+import { CharacterRepository } from "../src/character/character.repository.js";
+import { Request, Response, NextFunction } from "express";
 
-function mockRequest() {
-  return {
+sinon.mock("./character.controller");
+
+const mockRequest = () => {
+  const req: Partial<Request> = {
     body: {},
     params: {},
   };
-}
+  return req as Request;
+};
 
-function mockResponse() {
-  return {
-    json: sinon.spy(),
+const mockResponse = () => {
+  const res: Partial<Response> = {
+    json: sinon.stub(),
     status: sinon.stub().returnsThis(),
     send: sinon.stub().returnsThis(),
   };
-}
-
-// PARALELO y test dinamico
-
-function sumToN(n) {
-  let sum = 0;
-  for (let i = 0; i <= n; i++) {
-    sum += i;
-  }
-  return sum;
-}
-
-describe("add()", function () {
-  function add(args) {
-    return args.reduce((prev, curr) => prev + curr, 0);
-  }
-
-  let startTime;
-
-  before(function () {
-    startTime = Date.now();
-  });
-
-  after(function () {
-    const endTime = Date.now();
-    const duration = endTime - startTime;
-    console.log(`Test suite took ${duration}ms to run.`);
-  });
-
-  let tests = [];
-
-  for (let i = 0; i < 7000; i++) {
-    let newElement = { args: [], expected: sumToN(i + 1) };
-
-    for (let j = 0; j < i + 1; j++) {
-      newElement.args.push(j + 1);
-    }
-
-    tests.push(newElement);
-  }
-
-  tests.forEach(({ args, expected }) => {
-    it(`correctly adds ${args.length} args`, function () {
-      const res = add(args);
-      assert.strictEqual(res, expected);
-    });
-  });
-});
+  return res as Response;
+};
 
 describe("CharacterController CRUD", function () {
-  let repository;
-  let req;
-  let res;
-  let next;
+  let repository: CharacterRepository;
+  let req: Request;
+  let res: Response;
+  let next: NextFunction;
 
   beforeEach(function () {
     repository = new CharacterRepository();
@@ -83,7 +41,6 @@ describe("CharacterController CRUD", function () {
     res = mockResponse();
     next = sinon.spy();
 
-    // Mockear mÃ©todos del repositorio
     sinon.stub(repository, "findAll");
     sinon.stub(repository, "findOne");
     sinon.stub(repository, "add");
@@ -95,15 +52,76 @@ describe("CharacterController CRUD", function () {
     sinon.restore();
   });
 
+  it("should return all characters", () => {
+    repository.findAll();
+
+    findAll(req, res);
+    // @ts-ignore
+    expect(res.json.firstCall.args[0]).to.deep.equal({
+      data: [
+        {
+          name: "Darth Vader",
+          characterClass: "Sith",
+          level: 11,
+          hp: 101,
+          mana: 22,
+          attack: 11,
+          items: ["Lightsaber", "Death Star"],
+          id: "1234",
+        },
+        {
+          name: "Yoda",
+          characterClass: "Jedi",
+          level: 12,
+          hp: 120,
+          mana: 25,
+          attack: 12,
+          items: ["Lightsaber", "Wisdom"],
+          id: "9101",
+        },
+      ],
+    });
+  });
+
+  it("should return a character by id", function () {
+    req.params.id = "1234";
+    repository.findOne({ id: "1234" });
+
+    findOne(req, res);
+
+    // @ts-ignore
+    sinon.assert.calledOnce(res.json);
+    // @ts-ignore
+
+    // en los res.json hay que cambiar el assert xq cambia como el res.send y res.json manejan la data
+
+    expect(res.json.firstCall.args[0]).to.deep.equal({
+      data: {
+        name: "Darth Vader",
+        characterClass: "Sith",
+        level: 11,
+        hp: 101,
+        mana: 22,
+        attack: 11,
+        items: ["Lightsaber", "Death Star"],
+        id: "1234",
+      },
+    });
+  });
+
   it("should return 404 if character not found", function () {
     req.params.id = "0000";
-    repository.findOne.returns(null);
+    repository.findOne({ id: "0000" });
 
-    findOne(req, res, next);
+    findOne(req, res);
 
+    // @ts-ignore
     sinon.assert.calledOnce(res.status);
+    // @ts-ignore
     sinon.assert.calledWith(res.status, 404);
+    // @ts-ignore
     sinon.assert.calledOnce(res.send);
+    // @ts-ignore
     sinon.assert.calledWith(res.send, { message: "Character not found" });
   });
 
@@ -119,11 +137,14 @@ describe("CharacterController CRUD", function () {
       id: "5678",
     };
 
-    add(req, res, next);
-
+    add(req, res);
+    // @ts-ignore
     sinon.assert.calledOnce(res.status);
+    // @ts-ignore
     sinon.assert.calledWith(res.status, 201);
+    // @ts-ignore
     sinon.assert.calledOnce(res.send);
+    // @ts-ignore
     sinon.assert.calledWith(res.send, {
       message: "Character created",
       data: {
@@ -146,24 +167,15 @@ describe("CharacterController CRUD", function () {
     };
     req.params.id = "5678";
 
-    repository.update.returns(
-      new Character(
-        "Leia Organa",
-        "Rebel Leader",
-        20,
-        120,
-        80,
-        35,
-        ["Blaster", "Diplomacy"],
-        "5678"
-      )
-    );
+    update(req, res);
 
-    update(req, res, next);
-
+    // @ts-ignore
     sinon.assert.calledOnce(res.status);
+    // @ts-ignore
     sinon.assert.calledWith(res.status, 200);
+    // @ts-ignore
     sinon.assert.calledOnce(res.send);
+    // @ts-ignore
     sinon.assert.calledWith(res.send, {
       message: "Character updated successfully",
       data: {
@@ -186,37 +198,29 @@ describe("CharacterController CRUD", function () {
     };
     req.params.id = "9999";
 
-    repository.update.returns(null);
+    update(req, res);
 
-    update(req, res, next);
-
+    // @ts-ignore
     sinon.assert.calledOnce(res.status);
+    // @ts-ignore
     sinon.assert.calledWith(res.status, 404);
+    // @ts-ignore
     sinon.assert.calledOnce(res.send);
+    // @ts-ignore
     sinon.assert.calledWith(res.send, { message: "Character not found" });
   });
 
   it("should delete a character by id", function () {
     req.params.id = "5678";
 
-    repository.delete.returns(
-      new Character(
-        "Leia Organa",
-        "Rebel Leader",
-        20,
-        120,
-        80,
-        35,
-        ["Blaster", "Diplomacy"],
-        "5678"
-      )
-    );
-
-    remove(req, res, next);
-
+    remove(req, res);
+    // @ts-ignore
     sinon.assert.calledOnce(res.status);
+    // @ts-ignore
     sinon.assert.calledWith(res.status, 200);
+    // @ts-ignore
     sinon.assert.calledOnce(res.send);
+    // @ts-ignore
     sinon.assert.calledWith(res.send, {
       message: "Character deleted successfully",
     });
@@ -225,45 +229,14 @@ describe("CharacterController CRUD", function () {
   it("should return 404 when deleting a non-existent character", function () {
     req.params.id = "9999";
 
-    repository.delete.returns(null);
-
-    remove(req, res, next);
-
+    remove(req, res);
+    // @ts-ignore
     sinon.assert.calledOnce(res.status);
+    // @ts-ignore
     sinon.assert.calledWith(res.status, 404);
+    // @ts-ignore
     sinon.assert.calledOnce(res.send);
+    // @ts-ignore
     sinon.assert.calledWith(res.send, { message: "Character not found" });
-  });
-});
-
-// async
-
-function delayedAdd(a, b) {
-  return new Promise((resolve) => {
-    setTimeout(() => {
-      resolve(a + b);
-    }, 1000);
-  });
-}
-
-describe("delayedAdd()", function () {
-  it("should add 1 and 2", async function () {
-    const result = await delayedAdd(1, 2);
-    assert.strictEqual(result, 3);
-  });
-
-  it("should add 5 and 5", async function () {
-    const result = await delayedAdd(5, 5);
-    assert.strictEqual(result, 10);
-  });
-
-  it("should add 10 and 20", async function () {
-    const result = await delayedAdd(10, 20);
-    assert.strictEqual(result, 30);
-  });
-
-  it("should add 0 and 0", async function () {
-    const result = await delayedAdd(0, 0);
-    assert.strictEqual(result, 0);
   });
 });
