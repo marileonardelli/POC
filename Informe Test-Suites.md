@@ -3,12 +3,14 @@
 ## Integrantes
 
 **Mocha:**
-Pacienzia Bruno 50235,
-Pennice Lucas 50977,
-Genovese María Clara 50979.
+- Pacienzia Bruno 50235
+- Pennice Lucas 50977
+- Genovese María Clara 50979
 
 **Vitest:**
-Palamidesi Elias, Libera Franco 47903, Parisi Ramiro.
+- Palamidesi Elias 51881
+- Libera Franco 47903
+- Parisi Ramiro.
 
 ## Glosario
 
