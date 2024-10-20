@@ -45,8 +45,6 @@ Al ser gratuito y de código abierto, fomenta la colaboración y las contribucio
 
 TestCafe fue creado por DevExpress es una empresa de software que se especializa en crear herramientas de desarrollo y componentes de interfaz de usuario (UI) para diversas plataformas.
 
-
-
 ## Curva de aprendizaje 
 La curva de aprendizaje es relativamente baja, especialmente para aquellos que ya poseen familiaridad con lenguajes que utilizan etiquetas, como por ejemplo HTML. Dado que su sintaxis es similar a la de los scripts en JavaScript, quienes ya cuenten con conocimientos en este último encontrarán que el proceso de aprendizaje es aún más sencillo.
 
@@ -64,6 +62,18 @@ TestCafe ha visto un aumento en la demanda y el uso en el mercado de pruebas aut
 Su extencion en Vs https://marketplace.visualstudio.com/items?itemName=romanresh.testcafe-test-runner
 tiene actualmente 29,255 descargas y va en aumento 
 En github lo utilizan 9,8k
+
+Aunque es uno de los test menos utilizados ya que:
+
+**Popularidad de otras herramientas**: otras herramientas tienen una comunidad más grande y consolidada.
+
+**Integración limitada con otras herramientas**: Aunque TestCafe es fácil de configurar, algunas empresas ya están profundamente integradas con otras herramientas que ofrecen más plugins, soporte y adaptaciones para necesidades específicas.
+
+**Menor soporte para pruebas móviles y navegadores antiguos**: TestCafe tiene algunas limitaciones en cuanto al soporte de pruebas en dispositivos móviles y navegadores más antiguos, lo que puede ser una desventaja si la aplicación necesita ser probada en un rango más amplio de entornos.
+
+**Curva de aprendizaje y características específicas**: A pesar de ser relativamente fácil de usar, TestCafe puede no ser la primera opción para equipos de pruebas que ya están familiarizados con otros frameworks o que requieren características avanzadas que otras herramientas más maduras pueden ofrecer de manera más directa.
+
+**Comunicación y marketing**: TestCafe no ha tenido el mismo nivel de marketing y promoción que otras herramientas, lo que contribuye a su menor visibilidad en comparación con alternativas más conocidas.
 
 ---
 
