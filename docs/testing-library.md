@@ -61,7 +61,7 @@ La comunidad de Testing Library es bastante activa y está centrada en el ecosis
 En conclusio la comunidad es muy activa y aprender testing library puede ser muy facil gracias a la gran variedad de contenido acerca de este, ya que se cuenta con contenidos tanto escritos como audiovisuales.
 
 
-## Frameworks que lo utilizan
+## Frameworks en los que se utiliza
 
 ![Imagen de WhatsApp 2024-10-16 a las 21 40 54_633c5513](https://github.com/user-attachments/assets/09d30e4c-e1d0-4431-aa04-a333666c3dae)
 
