@@ -12,6 +12,11 @@
 - Libera Franco 47903
 - Parisi Ramiro 51035
 
+**Testing Library:**
+- Manavella Enzo 51509
+- Sandivaras Gonzalo 50819
+- Morresi Facundo 50359
+
 ## Glosario
 
 **Testing**: El Testing de Software es toda una disciplina en la ingeniería de software permite tener procesos, métodos de trabajo y herramientas para identificar defectos en el software alcanzando un proceso de estabilidad del mismo
