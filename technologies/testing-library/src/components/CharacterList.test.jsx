@@ -5,9 +5,9 @@ import CharacterList from './CharacterList.jsx';
 test('renders character list', () => {
   
   render(<CharacterList/>);
-  const character1 = screen.getByText(/Character 1/i);
-  const character2 = screen.getByText(/Character 2/i);
-  const character3 = screen.getByText(/Character 3/i);
+  const character1 = screen.getByText(/character 1/i);
+  const character2 = screen.getByText(/CHARACTER 2/i);
+  const character3 = screen.getByText(/Character 3/);
 
   expect(character1).toBeInTheDocument();
   expect(character2).toBeInTheDocument();
@@ -32,13 +32,13 @@ test('removes character when delete button is clicked', () => {
 test('adds new character',() =>{
   render(<CharacterList/>)
 
-  //Se puede rellenar las entradas con 'Character 4'
+  //Se rellena las entradas de un nuevo character con 'Character 4'
   fireEvent.change(screen.getByPlaceholderText(/Character ID/i), { target: {value: '4'}});
   fireEvent.change(screen.getByPlaceholderText(/Character Name/i),{target: {value: 'Character'}});
   
-  // El botton agregar funciona
-  fireEvent.click(screen.getByText(/Add Character/i));
+  // se clickea el boton de agregar el Character nuevo
+  fireEvent.click(screen.getByRole('button', {name: /Add Character/i}));
 
-  // Obseva si el Character 4 aparece en pantalla
+  // Obseva si el Character 4 agregado aparece en pantalla
   expect(screen.getByText(/Character 4/i)).toBeInTheDocument();
 });
