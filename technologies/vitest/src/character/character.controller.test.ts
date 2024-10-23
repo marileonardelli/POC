@@ -31,6 +31,9 @@ describe('CharacterController CRUD', () => {
   let res: Response;
   let next: NextFunction;
 
+  // Esto es un Hook de Vitest que se ejecuta antes de cada test
+  // Aquí se inicializan las variables que se van a utilizar en los tests
+  // y se mockean las funciones del repositorio, del controlador y de Express
   beforeEach(() => {
     repository = new CharacterRepository();
     req = mockRequest();
@@ -49,6 +52,7 @@ describe('CharacterController CRUD', () => {
     repository.findAll();
 
     findAll(req, res);
+
 
     expect(res.json).toHaveBeenCalledWith({
       "data": [
