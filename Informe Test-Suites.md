@@ -18,7 +18,7 @@
 - Morresi Facundo 50359
 
 **Jest:**
-- 46924 - Alvarez Sol 46924
+- Alvarez Sol 46924
 - Leonardelli Marianela 51337
 - Molinas María del Rosario 47786
 
