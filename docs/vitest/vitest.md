@@ -72,6 +72,7 @@ de Vite, una herramienta creada por Evan You, el creador de Vue.js.
 La curva de aprendizaje es relativamente baja, especialmente para aquellos
 que ya están familiarizados con Vite o con herramientas de pruebas como
 Jest. Su sintaxis es similar a la de Jest, lo que facilita la transición.
+<img>![curvaAprendizaje](https://github.com/Eliasusu/POC/blob/main/docs/vitest/src/Curva%20de%20aprendizaje.png)</img>
 
 ## Repositorio y Documentación
 
