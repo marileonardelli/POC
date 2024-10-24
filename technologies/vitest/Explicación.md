@@ -38,7 +38,7 @@ Toda esta información fue extraída del sitio oficial de [Vitest](https://vites
 ### vi.fn
 #### - type: `(fn?: Function) => Mock`
 
-Esta función crea un spy de una función, aunque se puede iniciar sin uno. Cada vez que se invoca una función, almacena sus argumentos de llamada, devoluciones y instancias. Además, puedes manipular su comportamiento con métodos. Si no se da ninguna función, se burla volverá `undefined`, cuando se invoca.
+Esta función crea un spy de una función, aunque se puede iniciar sin uno. Cada vez que se invoca una función, almacena sus argumentos de llamada, devoluciones y instancias. Además, puedes manipular su comportamiento con métodos. Si no se da ninguna función, el mock volverá `undefined`, cuando se invoca.
 
 ``` typescript
 
