@@ -13,6 +13,7 @@ Para eso utilizamos las siguientes funciones de Vitest
 1. `vi.fn()`
 2. `vi.spyOn()`
 3. `mockReturnThis()`
+4. `vi.mock`
 
 ---
 
@@ -37,7 +38,7 @@ Toda esta información fue extraída del sitio oficial de [Vitest](https://vites
 ### vi.fn
 #### - type: `(fn?: Function) => Mock`
 
-Esta función crea un spy de una función, aunque se puede iniciar sin uno. Cada vez que se invoca una función, almacena sus argumentos de llamada, devoluciones y instancias. Además, puedes manipular su comportamiento con métodos. Si no se da ninguna función, se burla volverá `undefined`, cuando se invoca.
+Esta función crea un spy de una función, aunque se puede iniciar sin uno. Cada vez que se invoca una función, almacena sus argumentos de llamada, devoluciones y instancias. Además, puedes manipular su comportamiento con métodos. Si no se da ninguna función, el mock volverá `undefined`, cuando se invoca.
 
 ``` typescript
 
@@ -75,5 +76,31 @@ expect(cart.getApples()).toBe(1)
 
 expect(spy).toHaveBeenCalled()
 expect(spy).toHaveReturnedWith(1)
+
+```
+### vi.mock
+#### - Type: `(path: string, factory?: MockOptions | ((importOriginal: () => unknown) => unknown)) => void`
+#### - Type: `<T>(path: Promise<T>, factory?: MockOptions | ((importOriginal: () => T) => T | Promise<T>)) => void`
+
+Esta funcion permite simular un módulo importado. Puede proporcionar una función de fábrica que devuelva un objeto simulado o un objeto con propiedades simuladas. La función de fábrica recibe una función que importa el módulo original. Si se proporciona una función de fábrica, se llamará en lugar de importar el módulo original.
+
+
+> [!WARNING]
+> vi.mock funciona solo para módulos importados con `import` o `require`.
+
+Desde Vitest 2.1, también puede proporcionar un objeto con una propiedad `spy` en lugar de una función de fábrica. Si `spy` es `true`, entonces Vitest simulará automáticamente el módulo como de costumbre, pero no anulará la implementación de las exportaciones. Esto es útil si solo desea afirmar que otro método llamó correctamente al método exportado.
+
+``` typescript
+import { calculator } from './src/calculator.ts'
+
+vi.mock('./src/calculator.ts', { spy: true })
+
+// calls the original implementation,
+// but allows asserting the behaviour later
+const result = calculator(1, 2)
+
+expect(result).toBe(3)
+expect(calculator).toHaveBeenCalledWith(1, 2)
+expect(calculator).toHaveReturned(3)
 
 ```

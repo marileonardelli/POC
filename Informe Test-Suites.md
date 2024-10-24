@@ -564,7 +564,7 @@ Para esto, Mocha suele necesitar ser complementado con herramientas que simulen 
 | Framework  | Tiempo de Ejecución (ms) | Cobertura de Código (%) |
 | ---------- | ------------------------ | ----------------------- |
 | **Vitest** | 25 ms                    | 100%                    |
-| **Jest**   | ms                       | %                       |
+| **Jest**   | 1.525 s                  | 100%                    |
 | **Mocha**  | 21 ms                    | 73.03%                  |
 
 ## Comparativa de Rendimiento (FRONTEND)
